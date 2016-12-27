@@ -150,7 +150,7 @@
     <value>Tahoma, 10pt, style=Bold</value>
   </data>
   <data name="btn_TaoBatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 273</value>
+    <value>109, 273</value>
   </data>
   <data name="btn_TaoBatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 74</value>
