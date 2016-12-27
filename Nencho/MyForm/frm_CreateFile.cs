@@ -85,41 +85,41 @@ namespace Nencho.MyForm
 
         private void btn_TaoBatch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_fBatchName.Text))
-            {
-                MessageBox.Show("Không được để trống tên batch!");
-                
-            }
-            else
-            {
-                var fbatchname = (from w in db.tbl_Batches where w.fBatchName == txt_fBatchName.Text select w.fBatchName).FirstOrDefault();
-                if (!string.IsNullOrEmpty(fbatchname))
-                {
-                    MessageBox.Show("Đã tồn tại Batch này, vui lòng nhập lại tên batch");
-                    return;
-                }
-                else
-                {
-                    db.CreateBatch(txt_fBatchName.Text, txt_UserName.Text);
-                    var dbExcel = new OleDbDataAdapter("Select * from [" + cbb_ChonSheet.Text + "]", _oleDbcon);
-                    DataTable dt = new DataTable();
-                    dbExcel.Fill(dt);
-                    foreach (DataRow dataRow in dt.Rows)
-                    {
-                        db.CreateLink(txt_fBatchName.Text, dataRow[0].ToString(), dataRow[1].ToString(), dataRow[2].ToString(), dataRow[3].ToString());
-                    }
-                    if (MessageBox.Show("Đã tạo thành công batch!\nBạn có muốn tiếp tục tạo batch khác?", "Thông báo!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        txt_fBatchName.Text = "";
-                        txt_FileExcel.Text = "";
-                        cbb_ChonSheet.SelectedText = null;
-                    }
-                    else
-                    {
-                        this.Close();
-                    }
-                }
-            }
+            //if (string.IsNullOrEmpty(txt_fBatchName.Text))
+            //{
+            //    MessageBox.Show("Không được để trống tên batch!");
+
+            //}
+            //else
+            //{
+            //    var fbatchname = (from w in db.tbl_Batches where w.fBatchName == txt_fBatchName.Text select w.fBatchName).FirstOrDefault();
+            //    if (!string.IsNullOrEmpty(fbatchname))
+            //    {
+            //        MessageBox.Show("Đã tồn tại Batch này, vui lòng nhập lại tên batch");
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        db.CreateBatch(txt_fBatchName.Text, txt_UserName.Text);
+            //        var dbExcel = new OleDbDataAdapter("Select * from [" + cbb_ChonSheet.Text + "]", _oleDbcon);
+            //        DataTable dt = new DataTable();
+            //        dbExcel.Fill(dt);
+            //        foreach (DataRow dataRow in dt.Rows)
+            //        {
+            //            db.CreateLink(txt_fBatchName.Text, dataRow[0].ToString(), dataRow[1].ToString(), dataRow[2].ToString(), dataRow[3].ToString());
+            //        }
+            //        if (MessageBox.Show("Đã tạo thành công batch!\nBạn có muốn tiếp tục tạo batch khác?", "Thông báo!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //        {
+            //            txt_fBatchName.Text = "";
+            //            txt_FileExcel.Text = "";
+            //            cbb_ChonSheet.SelectedText = null;
+            //        }
+            //        else
+            //        {
+            //            this.Close();
+            //        }
+            //    }
+            //}
         }
     }
 }
