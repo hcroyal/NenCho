@@ -95,6 +95,12 @@
     <Compile Include="MyForm\frm_ManagerUser.Designer.cs">
       <DependentUpon>frm_ManagerUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="DataNencho.dbml.layout">
