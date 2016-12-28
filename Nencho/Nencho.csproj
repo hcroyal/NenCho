@@ -59,6 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataNencho.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataNencho.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="MyForm\frm_CreateFile.cs">
       <SubType>Form</SubType>
@@ -86,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="DataNencho.dbml.layout">
+      <DependentUpon>DataNencho.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="MyForm\frm_CreateFile.resx">
       <DependentUpon>frm_CreateFile.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +132,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataNencho.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataNencho.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
