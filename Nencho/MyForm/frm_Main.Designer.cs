@@ -36,6 +36,7 @@
             this.btn_logout = new DevExpress.XtraBars.BarButtonItem();
             this.btn_exit = new DevExpress.XtraBars.BarButtonItem();
             this.baritem_Manager = new DevExpress.XtraBars.BarSubItem();
+            this.btn_ManagerFiles = new DevExpress.XtraBars.BarButtonItem();
             this.btn_manageruser = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -68,9 +69,10 @@
             this.btn_exit,
             this.baritem_Manager,
             this.barSubItem3,
-            this.btn_manageruser});
+            this.btn_manageruser,
+            this.btn_ManagerFiles});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 7;
             // 
             // bar2
             // 
@@ -115,11 +117,18 @@
             // baritem_Manager
             // 
             resources.ApplyResources(this.baritem_Manager, "baritem_Manager");
-            this.baritem_Manager.Enabled = false;
             this.baritem_Manager.Id = 3;
             this.baritem_Manager.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_ManagerFiles),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_manageruser)});
             this.baritem_Manager.Name = "baritem_Manager";
+            // 
+            // btn_ManagerFiles
+            // 
+            resources.ApplyResources(this.btn_ManagerFiles, "btn_ManagerFiles");
+            this.btn_ManagerFiles.Id = 6;
+            this.btn_ManagerFiles.Name = "btn_ManagerFiles";
+            this.btn_ManagerFiles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ManagerFiles_ItemClick);
             // 
             // btn_manageruser
             // 
@@ -235,5 +244,6 @@
         private DevExpress.XtraTab.XtraTabPage tab_checker2;
         private DevExpress.XtraTab.XtraTabPage tab_admin;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraBars.BarButtonItem btn_ManagerFiles;
     }
 }

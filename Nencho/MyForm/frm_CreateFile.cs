@@ -59,9 +59,9 @@ namespace Nencho.MyForm
 
                 {
                     _oleDbcon = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog.FileName + ";Extended Properties=Excel 12.0;");
-
+                    txt_fBatchName.Text = openFileDialog.SafeFileName;
                     _oleDbcon.Open();
-                    txt_FileExcel.Text = openFileDialog.SafeFileName;
+                    txt_FileExcel.Text = openFileDialog.FileName;
                     DataTable dt = _oleDbcon.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
 
                     _oleDbcon.Close();
@@ -79,47 +79,82 @@ namespace Nencho.MyForm
                     }
                     cbb_ChonSheet.Properties.DataSource = temp;
                     cbb_ChonSheet.ItemIndex = 0;
-                }
+                    }
             }
         }
 
         private void btn_TaoBatch_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(txt_fBatchName.Text))
-            //{
-            //    MessageBox.Show("Không được để trống tên batch!");
+            if (string.IsNullOrEmpty(txt_FileExcel.Text))
+            {
+                MessageBox.Show("Không được để trống file Excel!");
 
-            //}
-            //else
-            //{
-            //    var fbatchname = (from w in db.tbl_Batches where w.fBatchName == txt_fBatchName.Text select w.fBatchName).FirstOrDefault();
-            //    if (!string.IsNullOrEmpty(fbatchname))
-            //    {
-            //        MessageBox.Show("Đã tồn tại Batch này, vui lòng nhập lại tên batch");
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        db.CreateBatch(txt_fBatchName.Text, txt_UserName.Text);
-            //        var dbExcel = new OleDbDataAdapter("Select * from [" + cbb_ChonSheet.Text + "]", _oleDbcon);
-            //        DataTable dt = new DataTable();
-            //        dbExcel.Fill(dt);
-            //        foreach (DataRow dataRow in dt.Rows)
-            //        {
-            //            db.CreateLink(txt_fBatchName.Text, dataRow[0].ToString(), dataRow[1].ToString(), dataRow[2].ToString(), dataRow[3].ToString());
-            //        }
-            //        if (MessageBox.Show("Đã tạo thành công batch!\nBạn có muốn tiếp tục tạo batch khác?", "Thông báo!", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //        {
-            //            txt_fBatchName.Text = "";
-            //            txt_FileExcel.Text = "";
-            //            cbb_ChonSheet.SelectedText = null;
-            //        }
-            //        else
-            //        {
-            //            this.Close();
-            //        }
-            //    }
-            //}
+            }
+            else
+            {
+                var fbatchname = (from w in Global.DataNencho.tbl_Batches where w.fBatchName == txt_fBatchName.Text select w.fBatchName).FirstOrDefault();
+                if (!string.IsNullOrEmpty(fbatchname))
+                {
+                    MessageBox.Show("Đã tồn tại Batch này, vui lòng nhập lại tên batch");
+                    return;
+                }
+                else
+                {
+                    Global.DataNencho.CreateBatch(txt_fBatchName.Text, txt_UserName.Text,txt_FileExcel.Text);
+                    var dbExcel = new OleDbDataAdapter("Select * from [" + cbb_ChonSheet.Text + "]", _oleDbcon);
+                    DataTable dt = new DataTable();
+                    dbExcel.Fill(dt);
+                    int n = 1;
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+                        if (n>8)
+                        {
+                            Global.DataNencho.CreateFile(txt_fBatchName.Text,
+                                                    dataRow[2].ToString(),
+                                                    dataRow[3].ToString(),
+                                                    dataRow[4].ToString(),
+                                                    dataRow[5].ToString(),
+                                                    dataRow[6].ToString(),
+                                                    dataRow[7].ToString(),
+                                                    dataRow[8].ToString(),
+                                                    dataRow[9].ToString(),
+                                                    dataRow[10].ToString(),
+                                                    dataRow[11].ToString(),
+                                                    dataRow[12].ToString(),
+                                                    dataRow[13].ToString(),
+                                                    dataRow[14].ToString(),
+                                                    dataRow[15].ToString(),
+                                                    dataRow[16].ToString(),
+                                                    dataRow[17].ToString(),
+                                                    dataRow[18].ToString(),
+                                                    dataRow[19].ToString(),
+                                                    dataRow[20].ToString(),
+                                                    dataRow[21].ToString(),
+                                                    dataRow[22].ToString(),
+                                                    dataRow[23].ToString(),
+                                                    dataRow[24].ToString(),
+                                                    dataRow[25].ToString(),
+                                                    dataRow[26].ToString(),
+                                                    dataRow[27].ToString(),
+                                                    dataRow[28].ToString(),
+                                                    dataRow[29].ToString(),
+                                                    dataRow[30].ToString(),
+                                                    dataRow[31].ToString());
+                        }
+                        n++;
+                    }
+                    if (MessageBox.Show("Đã tạo thành công batch!\nBạn có muốn tiếp tục tạo batch khác?", "Thông báo!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        txt_fBatchName.Text = "";
+                        txt_FileExcel.Text = "";
+                        cbb_ChonSheet.SelectedText = null;
+                    }
+                    else
+                    {
+                        Close();
+                    }
+                }
+            }
         }
     }
 }
