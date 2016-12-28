@@ -107,7 +107,7 @@ namespace Nencho.MyForm
                     int n = 1;
                     foreach (DataRow dataRow in dt.Rows)
                     {
-                        if (n>8)
+                        if (n>7 && n<dt.Rows.Count)
                         {
                             Global.DataNencho.CreateFile(txt_fBatchName.Text,
                                                     dataRow[2].ToString(),
