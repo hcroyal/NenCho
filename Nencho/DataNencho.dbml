@@ -24,13 +24,6 @@
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetRoLe" Method="GetRoLe">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="role" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
-    <ElementType Name="GetRoLeResult">
-      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
@@ -66,5 +59,29 @@
     <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBatchDE" Method="GetBatchDE">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatchDEResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatchChecker" Method="GetBatchChecker">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatchCheckerResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatchAdmin" Method="GetBatchAdmin">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatchAdminResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRoLe" Method="GetRoLe">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetRoLeResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>
