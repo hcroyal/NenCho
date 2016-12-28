@@ -33,9 +33,6 @@ namespace Nencho
     partial void Inserttbl_Admin(tbl_Admin instance);
     partial void Updatetbl_Admin(tbl_Admin instance);
     partial void Deletetbl_Admin(tbl_Admin instance);
-    partial void Inserttbl_User(tbl_User instance);
-    partial void Updatetbl_User(tbl_User instance);
-    partial void Deletetbl_User(tbl_User instance);
     partial void Inserttbl_Batch(tbl_Batch instance);
     partial void Updatetbl_Batch(tbl_Batch instance);
     partial void Deletetbl_Batch(tbl_Batch instance);
@@ -45,15 +42,18 @@ namespace Nencho
     partial void Inserttbl_Checker_Backup(tbl_Checker_Backup instance);
     partial void Updatetbl_Checker_Backup(tbl_Checker_Backup instance);
     partial void Deletetbl_Checker_Backup(tbl_Checker_Backup instance);
+    partial void Inserttbl_File(tbl_File instance);
+    partial void Updatetbl_File(tbl_File instance);
+    partial void Deletetbl_File(tbl_File instance);
     partial void Inserttbl_Input(tbl_Input instance);
     partial void Updatetbl_Input(tbl_Input instance);
     partial void Deletetbl_Input(tbl_Input instance);
     partial void Inserttbl_Role(tbl_Role instance);
     partial void Updatetbl_Role(tbl_Role instance);
     partial void Deletetbl_Role(tbl_Role instance);
-    partial void Inserttbl_File(tbl_File instance);
-    partial void Updatetbl_File(tbl_File instance);
-    partial void Deletetbl_File(tbl_File instance);
+    partial void Inserttbl_User(tbl_User instance);
+    partial void Updatetbl_User(tbl_User instance);
+    partial void Deletetbl_User(tbl_User instance);
     #endregion
 		
 		public DataNenchoDataContext() : 
@@ -86,14 +86,6 @@ namespace Nencho
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<tbl_Version> tbl_Versions
-		{
-			get
-			{
-				return this.GetTable<tbl_Version>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tbl_Admin> tbl_Admins
 		{
 			get
@@ -102,11 +94,11 @@ namespace Nencho
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_User> tbl_Users
+		public System.Data.Linq.Table<tbl_Version> tbl_Versions
 		{
 			get
 			{
-				return this.GetTable<tbl_User>();
+				return this.GetTable<tbl_Version>();
 			}
 		}
 		
@@ -134,6 +126,14 @@ namespace Nencho
 			}
 		}
 		
+		public System.Data.Linq.Table<tbl_File> tbl_Files
+		{
+			get
+			{
+				return this.GetTable<tbl_File>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tbl_Input> tbl_Inputs
 		{
 			get
@@ -158,11 +158,11 @@ namespace Nencho
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_File> tbl_Files
+		public System.Data.Linq.Table<tbl_User> tbl_Users
 		{
 			get
 			{
-				return this.GetTable<tbl_File>();
+				return this.GetTable<tbl_User>();
 			}
 		}
 		
@@ -178,43 +178,6 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, idrole, nhanvien);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CreateFile")]
-		public void CreateFile(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_C", DbType="NVarChar(255)")] string cot_C, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_D", DbType="NVarChar(255)")] string cot_D, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_E", DbType="NVarChar(255)")] string cot_E, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_F", DbType="NVarChar(255)")] string cot_F, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_H", DbType="NVarChar(255)")] string cot_H, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_I", DbType="NVarChar(255)")] string cot_I, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_J", DbType="NVarChar(255)")] string cot_J, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_K", DbType="NVarChar(255)")] string cot_K, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_L", DbType="NVarChar(255)")] string cot_L, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_M", DbType="NVarChar(255)")] string cot_M, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_N", DbType="NVarChar(255)")] string cot_N, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_O", DbType="NVarChar(255)")] string cot_O, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_P", DbType="NVarChar(255)")] string cot_P, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Q", DbType="NVarChar(255)")] string cot_Q, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_R", DbType="NVarChar(255)")] string cot_R, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_S", DbType="NVarChar(255)")] string cot_S, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_T", DbType="NVarChar(255)")] string cot_T, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_U", DbType="NVarChar(255)")] string cot_U, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_V", DbType="NVarChar(255)")] string cot_V, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_W", DbType="NVarChar(255)")] string cot_W, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_X", DbType="NVarChar(255)")] string cot_X, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Y", DbType="NVarChar(255)")] string cot_Y, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AA", DbType="NVarChar(255)")] string cot_AA, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AB", DbType="NVarChar(255)")] string cot_AB, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AC", DbType="NVarChar(255)")] string cot_AC, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AD", DbType="NVarChar(255)")] string cot_AD, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AE", DbType="NVarChar(255)")] string cot_AE, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AF", DbType="NVarChar(255)")] string cot_AF)
-		{
-			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, cot_C, cot_D, cot_E, cot_F, cot_G, cot_H, cot_I, cot_J, cot_K, cot_L, cot_M, cot_N, cot_O, cot_P, cot_Q, cot_R, cot_S, cot_T, cot_U, cot_V, cot_W, cot_X, cot_Y, cot_Z, cot_AA, cot_AB, cot_AC, cot_AD, cot_AE, cot_AF);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteFile")]
@@ -254,8 +217,6 @@ namespace Nencho
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDE")]
 		public ISingleResult<GetBatchDEResult> GetBatchDE([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.KiemTraLogin")]
-		public int KiemTraLogin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string password)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
 			return ((ISingleResult<GetBatchDEResult>)(result.ReturnValue));
@@ -303,120 +264,49 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDE")]
-		public ISingleResult<GetBatchDEResult> GetBatchDE([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetBatchDEResult>)(result.ReturnValue));
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateToken_TableUser")]
 		public int UpdateToken_TableUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ToKen", DbType="NVarChar(200)")] string toKen)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, toKen);
 			return ((int)(result.ReturnValue));
-	}
-	}
-	
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchChecker")]
-		public ISingleResult<GetBatchCheckerResult> GetBatchChecker([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetBatchCheckerResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchAdmin")]
-		public ISingleResult<GetBatchAdminResult> GetBatchAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CreateFile")]
+		public int CreateFile(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_C", DbType="NVarChar(255)")] string cot_C, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_D", DbType="NVarChar(255)")] string cot_D, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_E", DbType="NVarChar(255)")] string cot_E, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_F", DbType="NVarChar(255)")] string cot_F, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_H", DbType="NVarChar(255)")] string cot_H, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_I", DbType="NVarChar(255)")] string cot_I, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_J", DbType="NVarChar(255)")] string cot_J, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_K", DbType="NVarChar(255)")] string cot_K, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_L", DbType="NVarChar(255)")] string cot_L, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_M", DbType="NVarChar(255)")] string cot_M, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_N", DbType="NVarChar(255)")] string cot_N, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_O", DbType="NVarChar(255)")] string cot_O, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_P", DbType="NVarChar(255)")] string cot_P, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Q", DbType="NVarChar(255)")] string cot_Q, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_R", DbType="NVarChar(255)")] string cot_R, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_S", DbType="NVarChar(255)")] string cot_S, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_T", DbType="NVarChar(255)")] string cot_T, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_U", DbType="NVarChar(255)")] string cot_U, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_V", DbType="NVarChar(255)")] string cot_V, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_W", DbType="NVarChar(255)")] string cot_W, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_X", DbType="NVarChar(255)")] string cot_X, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Y", DbType="NVarChar(255)")] string cot_Y, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AA", DbType="NVarChar(255)")] string cot_AA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AB", DbType="NVarChar(255)")] string cot_AB, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AC", DbType="NVarChar(255)")] string cot_AC, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AD", DbType="NVarChar(255)")] string cot_AD, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AE", DbType="NVarChar(255)")] string cot_AE, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AF", DbType="NVarChar(255)")] string cot_AF)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetBatchAdminResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLe")]
-		public ISingleResult<GetRoLeResult> GetRoLe([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetRoLeResult>)(result.ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Version")]
-	public partial class tbl_Version
-	{
-		
-		private string _IdProject;
-		
-		private string _Version;
-		
-		private string _NameProject;
-		
-		private string _GhiChu;
-		
-		public tbl_Version()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProject", DbType="NVarChar(200)")]
-		public string IdProject
-		{
-			get
-			{
-				return this._IdProject;
-			}
-			set
-			{
-				if ((this._IdProject != value))
-				{
-					this._IdProject = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", DbType="NVarChar(200)")]
-		public string Version
-		{
-			get
-			{
-				return this._Version;
-			}
-			set
-			{
-				if ((this._Version != value))
-				{
-					this._Version = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameProject", DbType="NVarChar(200)")]
-		public string NameProject
-		{
-			get
-			{
-				return this._NameProject;
-			}
-			set
-			{
-				if ((this._NameProject != value))
-				{
-					this._NameProject = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
-		public string GhiChu
-		{
-			get
-			{
-				return this._GhiChu;
-			}
-			set
-			{
-				if ((this._GhiChu != value))
-				{
-					this._GhiChu = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, cot_C, cot_D, cot_E, cot_F, cot_G, cot_H, cot_I, cot_J, cot_K, cot_L, cot_M, cot_N, cot_O, cot_P, cot_Q, cot_R, cot_S, cot_T, cot_U, cot_V, cot_W, cot_X, cot_Y, cot_Z, cot_AA, cot_AB, cot_AC, cot_AD, cot_AE, cot_AF);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -1034,160 +924,83 @@ namespace Nencho
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_User")]
-	public partial class tbl_User : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Version")]
+	public partial class tbl_Version
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		private string _IdProject;
 		
-		private string _UserName;
+		private string _Version;
 		
-		private string _Password;
+		private string _NameProject;
 		
-		private string _IdRole;
+		private string _GhiChu;
 		
-		private string _Nhanvien;
-		
-		private string _Token;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUserNameChanging(string value);
-    partial void OnUserNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnIdRoleChanging(string value);
-    partial void OnIdRoleChanged();
-    partial void OnNhanvienChanging(string value);
-    partial void OnNhanvienChanged();
-    partial void OnTokenChanging(string value);
-    partial void OnTokenChanged();
-    #endregion
-		
-		public tbl_User()
+		public tbl_Version()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string UserName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProject", DbType="NVarChar(200)")]
+		public string IdProject
 		{
 			get
 			{
-				return this._UserName;
+				return this._IdProject;
 			}
 			set
 			{
-				if ((this._UserName != value))
+				if ((this._IdProject != value))
 				{
-					this.OnUserNameChanging(value);
-					this.SendPropertyChanging();
-					this._UserName = value;
-					this.SendPropertyChanged("UserName");
-					this.OnUserNameChanged();
+					this._IdProject = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
-		public string Password
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Version", DbType="NVarChar(200)")]
+		public string Version
 		{
 			get
 			{
-				return this._Password;
+				return this._Version;
 			}
 			set
 			{
-				if ((this._Password != value))
+				if ((this._Version != value))
 				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
+					this._Version = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
-		public string IdRole
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameProject", DbType="NVarChar(200)")]
+		public string NameProject
 		{
 			get
 			{
-				return this._IdRole;
+				return this._NameProject;
 			}
 			set
 			{
-				if ((this._IdRole != value))
+				if ((this._NameProject != value))
 				{
-					this.OnIdRoleChanging(value);
-					this.SendPropertyChanging();
-					this._IdRole = value;
-					this.SendPropertyChanged("IdRole");
-					this.OnIdRoleChanged();
+					this._NameProject = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
-		public string Nhanvien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
+		public string GhiChu
 		{
 			get
 			{
-				return this._Nhanvien;
+				return this._GhiChu;
 			}
 			set
 			{
-				if ((this._Nhanvien != value))
+				if ((this._GhiChu != value))
 				{
-					this.OnNhanvienChanging(value);
-					this.SendPropertyChanging();
-					this._Nhanvien = value;
-					this.SendPropertyChanged("Nhanvien");
-					this.OnNhanvienChanged();
+					this._GhiChu = value;
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
-		public string Token
-		{
-			get
-			{
-				return this._Token;
-			}
-			set
-			{
-				if ((this._Token != value))
-				{
-					this.OnTokenChanging(value);
-					this.SendPropertyChanging();
-					this._Token = value;
-					this.SendPropertyChanged("Token");
-					this.OnTokenChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -1781,7 +1594,7 @@ namespace Nencho
 					this.OnTruong_38Changed();
 				}
 			}
-			}
+		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
 		public string Truong_39
@@ -1789,7 +1602,7 @@ namespace Nencho
 			get
 			{
 				return this._Truong_39;
-		}
+			}
 			set
 			{
 				if ((this._Truong_39 != value))
@@ -1799,10 +1612,10 @@ namespace Nencho
 					this._Truong_39 = value;
 					this.SendPropertyChanged("Truong_39");
 					this.OnTruong_39Changed();
-	}
+				}
 			}
 		}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
 		public string Truong_40
 		{
@@ -2553,6 +2366,1340 @@ namespace Nencho
 					this._IDFile = value;
 					this.SendPropertyChanged("IDFile");
 					this.OnIDFileChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_File")]
+	public partial class tbl_File : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _ID;
+		
+		private string _fBatchName;
+		
+		private string _Cot_C;
+		
+		private string _Cot_D;
+		
+		private string _Cot_E;
+		
+		private string _Cot_F;
+		
+		private string _Cot_G;
+		
+		private string _Cot_H;
+		
+		private string _Cot_I;
+		
+		private string _Cot_J;
+		
+		private string _Cot_K;
+		
+		private string _Cot_L;
+		
+		private string _Cot_M;
+		
+		private string _Cot_N;
+		
+		private string _Cot_O;
+		
+		private string _Cot_P;
+		
+		private string _Cot_Q;
+		
+		private string _Cot_R;
+		
+		private string _Cot_S;
+		
+		private string _Cot_T;
+		
+		private string _Cot_U;
+		
+		private string _Cot_V;
+		
+		private string _Cot_W;
+		
+		private string _Cot_X;
+		
+		private string _Cot_Y;
+		
+		private string _Cot_Z;
+		
+		private string _Cot_AA;
+		
+		private string _Cot_AB;
+		
+		private string _Cot_AC;
+		
+		private string _Cot_AD;
+		
+		private string _Cot_AE;
+		
+		private string _Cot_AF;
+		
+		private System.Nullable<bool> _ReadFile_Input;
+		
+		private System.Nullable<System.DateTime> _Date_ReadFile_Input;
+		
+		private System.Nullable<bool> _SubmitFile_Input;
+		
+		private System.Nullable<System.DateTime> _Date_SubmitFile_Input;
+		
+		private System.Nullable<bool> _ReadFile_Check;
+		
+		private System.Nullable<System.DateTime> _Date_ReadFile_Check;
+		
+		private System.Nullable<bool> _SubmitFile_Check;
+		
+		private System.Nullable<System.DateTime> _Date_SubmitFile_Check;
+		
+		private System.Nullable<bool> _ReadFile_Admin;
+		
+		private System.Nullable<System.DateTime> _Date_ReadFile_Admin;
+		
+		private System.Nullable<bool> _SubmitFile_Admin;
+		
+		private System.Nullable<System.DateTime> _Date_SubmitFile_Admin;
+		
+		private System.Nullable<bool> _Error_Input;
+		
+		private System.Nullable<bool> _ReadFile_Input_2;
+		
+		private System.Nullable<System.DateTime> _Date_ReadFile_Input_2;
+		
+		private System.Nullable<bool> _SubmitFile_Input_2;
+		
+		private System.Nullable<System.DateTime> _Date_SubmitFile_Input_2;
+		
+		private System.Nullable<bool> _Error_Check;
+		
+		private System.Nullable<bool> _ReadFile_Check_2;
+		
+		private System.Nullable<System.DateTime> _Date_ReadFile_Check_2;
+		
+		private System.Nullable<bool> _SubmitFile_Check_2;
+		
+		private System.Nullable<System.DateTime> _Date_SubmitFile_Check_2;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(long value);
+    partial void OnIDChanged();
+    partial void OnfBatchNameChanging(string value);
+    partial void OnfBatchNameChanged();
+    partial void OnCot_CChanging(string value);
+    partial void OnCot_CChanged();
+    partial void OnCot_DChanging(string value);
+    partial void OnCot_DChanged();
+    partial void OnCot_EChanging(string value);
+    partial void OnCot_EChanged();
+    partial void OnCot_FChanging(string value);
+    partial void OnCot_FChanged();
+    partial void OnCot_GChanging(string value);
+    partial void OnCot_GChanged();
+    partial void OnCot_HChanging(string value);
+    partial void OnCot_HChanged();
+    partial void OnCot_IChanging(string value);
+    partial void OnCot_IChanged();
+    partial void OnCot_JChanging(string value);
+    partial void OnCot_JChanged();
+    partial void OnCot_KChanging(string value);
+    partial void OnCot_KChanged();
+    partial void OnCot_LChanging(string value);
+    partial void OnCot_LChanged();
+    partial void OnCot_MChanging(string value);
+    partial void OnCot_MChanged();
+    partial void OnCot_NChanging(string value);
+    partial void OnCot_NChanged();
+    partial void OnCot_OChanging(string value);
+    partial void OnCot_OChanged();
+    partial void OnCot_PChanging(string value);
+    partial void OnCot_PChanged();
+    partial void OnCot_QChanging(string value);
+    partial void OnCot_QChanged();
+    partial void OnCot_RChanging(string value);
+    partial void OnCot_RChanged();
+    partial void OnCot_SChanging(string value);
+    partial void OnCot_SChanged();
+    partial void OnCot_TChanging(string value);
+    partial void OnCot_TChanged();
+    partial void OnCot_UChanging(string value);
+    partial void OnCot_UChanged();
+    partial void OnCot_VChanging(string value);
+    partial void OnCot_VChanged();
+    partial void OnCot_WChanging(string value);
+    partial void OnCot_WChanged();
+    partial void OnCot_XChanging(string value);
+    partial void OnCot_XChanged();
+    partial void OnCot_YChanging(string value);
+    partial void OnCot_YChanged();
+    partial void OnCot_ZChanging(string value);
+    partial void OnCot_ZChanged();
+    partial void OnCot_AAChanging(string value);
+    partial void OnCot_AAChanged();
+    partial void OnCot_ABChanging(string value);
+    partial void OnCot_ABChanged();
+    partial void OnCot_ACChanging(string value);
+    partial void OnCot_ACChanged();
+    partial void OnCot_ADChanging(string value);
+    partial void OnCot_ADChanged();
+    partial void OnCot_AEChanging(string value);
+    partial void OnCot_AEChanged();
+    partial void OnCot_AFChanging(string value);
+    partial void OnCot_AFChanged();
+    partial void OnReadFile_InputChanging(System.Nullable<bool> value);
+    partial void OnReadFile_InputChanged();
+    partial void OnDate_ReadFile_InputChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_ReadFile_InputChanged();
+    partial void OnSubmitFile_InputChanging(System.Nullable<bool> value);
+    partial void OnSubmitFile_InputChanged();
+    partial void OnDate_SubmitFile_InputChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_SubmitFile_InputChanged();
+    partial void OnReadFile_CheckChanging(System.Nullable<bool> value);
+    partial void OnReadFile_CheckChanged();
+    partial void OnDate_ReadFile_CheckChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_ReadFile_CheckChanged();
+    partial void OnSubmitFile_CheckChanging(System.Nullable<bool> value);
+    partial void OnSubmitFile_CheckChanged();
+    partial void OnDate_SubmitFile_CheckChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_SubmitFile_CheckChanged();
+    partial void OnReadFile_AdminChanging(System.Nullable<bool> value);
+    partial void OnReadFile_AdminChanged();
+    partial void OnDate_ReadFile_AdminChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_ReadFile_AdminChanged();
+    partial void OnSubmitFile_AdminChanging(System.Nullable<bool> value);
+    partial void OnSubmitFile_AdminChanged();
+    partial void OnDate_SubmitFile_AdminChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_SubmitFile_AdminChanged();
+    partial void OnError_InputChanging(System.Nullable<bool> value);
+    partial void OnError_InputChanged();
+    partial void OnReadFile_Input_2Changing(System.Nullable<bool> value);
+    partial void OnReadFile_Input_2Changed();
+    partial void OnDate_ReadFile_Input_2Changing(System.Nullable<System.DateTime> value);
+    partial void OnDate_ReadFile_Input_2Changed();
+    partial void OnSubmitFile_Input_2Changing(System.Nullable<bool> value);
+    partial void OnSubmitFile_Input_2Changed();
+    partial void OnDate_SubmitFile_Input_2Changing(System.Nullable<System.DateTime> value);
+    partial void OnDate_SubmitFile_Input_2Changed();
+    partial void OnError_CheckChanging(System.Nullable<bool> value);
+    partial void OnError_CheckChanged();
+    partial void OnReadFile_Check_2Changing(System.Nullable<bool> value);
+    partial void OnReadFile_Check_2Changed();
+    partial void OnDate_ReadFile_Check_2Changing(System.Nullable<System.DateTime> value);
+    partial void OnDate_ReadFile_Check_2Changed();
+    partial void OnSubmitFile_Check_2Changing(System.Nullable<bool> value);
+    partial void OnSubmitFile_Check_2Changed();
+    partial void OnDate_SubmitFile_Check_2Changing(System.Nullable<System.DateTime> value);
+    partial void OnDate_SubmitFile_Check_2Changed();
+    #endregion
+		
+		public tbl_File()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this.OnfBatchNameChanging(value);
+					this.SendPropertyChanging();
+					this._fBatchName = value;
+					this.SendPropertyChanged("fBatchName");
+					this.OnfBatchNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_C", DbType="NVarChar(255)")]
+		public string Cot_C
+		{
+			get
+			{
+				return this._Cot_C;
+			}
+			set
+			{
+				if ((this._Cot_C != value))
+				{
+					this.OnCot_CChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_C = value;
+					this.SendPropertyChanged("Cot_C");
+					this.OnCot_CChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_D", DbType="NVarChar(255)")]
+		public string Cot_D
+		{
+			get
+			{
+				return this._Cot_D;
+			}
+			set
+			{
+				if ((this._Cot_D != value))
+				{
+					this.OnCot_DChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_D = value;
+					this.SendPropertyChanged("Cot_D");
+					this.OnCot_DChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_E", DbType="NVarChar(255)")]
+		public string Cot_E
+		{
+			get
+			{
+				return this._Cot_E;
+			}
+			set
+			{
+				if ((this._Cot_E != value))
+				{
+					this.OnCot_EChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_E = value;
+					this.SendPropertyChanged("Cot_E");
+					this.OnCot_EChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_F", DbType="NVarChar(255)")]
+		public string Cot_F
+		{
+			get
+			{
+				return this._Cot_F;
+			}
+			set
+			{
+				if ((this._Cot_F != value))
+				{
+					this.OnCot_FChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_F = value;
+					this.SendPropertyChanged("Cot_F");
+					this.OnCot_FChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this.OnCot_GChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_G = value;
+					this.SendPropertyChanged("Cot_G");
+					this.OnCot_GChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_H", DbType="NVarChar(255)")]
+		public string Cot_H
+		{
+			get
+			{
+				return this._Cot_H;
+			}
+			set
+			{
+				if ((this._Cot_H != value))
+				{
+					this.OnCot_HChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_H = value;
+					this.SendPropertyChanged("Cot_H");
+					this.OnCot_HChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_I", DbType="NVarChar(255)")]
+		public string Cot_I
+		{
+			get
+			{
+				return this._Cot_I;
+			}
+			set
+			{
+				if ((this._Cot_I != value))
+				{
+					this.OnCot_IChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_I = value;
+					this.SendPropertyChanged("Cot_I");
+					this.OnCot_IChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_J", DbType="NVarChar(255)")]
+		public string Cot_J
+		{
+			get
+			{
+				return this._Cot_J;
+			}
+			set
+			{
+				if ((this._Cot_J != value))
+				{
+					this.OnCot_JChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_J = value;
+					this.SendPropertyChanged("Cot_J");
+					this.OnCot_JChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_K", DbType="NVarChar(255)")]
+		public string Cot_K
+		{
+			get
+			{
+				return this._Cot_K;
+			}
+			set
+			{
+				if ((this._Cot_K != value))
+				{
+					this.OnCot_KChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_K = value;
+					this.SendPropertyChanged("Cot_K");
+					this.OnCot_KChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_L", DbType="NVarChar(255)")]
+		public string Cot_L
+		{
+			get
+			{
+				return this._Cot_L;
+			}
+			set
+			{
+				if ((this._Cot_L != value))
+				{
+					this.OnCot_LChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_L = value;
+					this.SendPropertyChanged("Cot_L");
+					this.OnCot_LChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_M", DbType="NVarChar(255)")]
+		public string Cot_M
+		{
+			get
+			{
+				return this._Cot_M;
+			}
+			set
+			{
+				if ((this._Cot_M != value))
+				{
+					this.OnCot_MChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_M = value;
+					this.SendPropertyChanged("Cot_M");
+					this.OnCot_MChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_N", DbType="NVarChar(255)")]
+		public string Cot_N
+		{
+			get
+			{
+				return this._Cot_N;
+			}
+			set
+			{
+				if ((this._Cot_N != value))
+				{
+					this.OnCot_NChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_N = value;
+					this.SendPropertyChanged("Cot_N");
+					this.OnCot_NChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_O", DbType="NVarChar(255)")]
+		public string Cot_O
+		{
+			get
+			{
+				return this._Cot_O;
+			}
+			set
+			{
+				if ((this._Cot_O != value))
+				{
+					this.OnCot_OChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_O = value;
+					this.SendPropertyChanged("Cot_O");
+					this.OnCot_OChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_P", DbType="NVarChar(255)")]
+		public string Cot_P
+		{
+			get
+			{
+				return this._Cot_P;
+			}
+			set
+			{
+				if ((this._Cot_P != value))
+				{
+					this.OnCot_PChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_P = value;
+					this.SendPropertyChanged("Cot_P");
+					this.OnCot_PChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Q", DbType="NVarChar(255)")]
+		public string Cot_Q
+		{
+			get
+			{
+				return this._Cot_Q;
+			}
+			set
+			{
+				if ((this._Cot_Q != value))
+				{
+					this.OnCot_QChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_Q = value;
+					this.SendPropertyChanged("Cot_Q");
+					this.OnCot_QChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_R", DbType="NVarChar(255)")]
+		public string Cot_R
+		{
+			get
+			{
+				return this._Cot_R;
+			}
+			set
+			{
+				if ((this._Cot_R != value))
+				{
+					this.OnCot_RChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_R = value;
+					this.SendPropertyChanged("Cot_R");
+					this.OnCot_RChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_S", DbType="NVarChar(255)")]
+		public string Cot_S
+		{
+			get
+			{
+				return this._Cot_S;
+			}
+			set
+			{
+				if ((this._Cot_S != value))
+				{
+					this.OnCot_SChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_S = value;
+					this.SendPropertyChanged("Cot_S");
+					this.OnCot_SChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_T", DbType="NVarChar(255)")]
+		public string Cot_T
+		{
+			get
+			{
+				return this._Cot_T;
+			}
+			set
+			{
+				if ((this._Cot_T != value))
+				{
+					this.OnCot_TChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_T = value;
+					this.SendPropertyChanged("Cot_T");
+					this.OnCot_TChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_U", DbType="NVarChar(255)")]
+		public string Cot_U
+		{
+			get
+			{
+				return this._Cot_U;
+			}
+			set
+			{
+				if ((this._Cot_U != value))
+				{
+					this.OnCot_UChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_U = value;
+					this.SendPropertyChanged("Cot_U");
+					this.OnCot_UChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_V", DbType="NVarChar(255)")]
+		public string Cot_V
+		{
+			get
+			{
+				return this._Cot_V;
+			}
+			set
+			{
+				if ((this._Cot_V != value))
+				{
+					this.OnCot_VChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_V = value;
+					this.SendPropertyChanged("Cot_V");
+					this.OnCot_VChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_W", DbType="NVarChar(255)")]
+		public string Cot_W
+		{
+			get
+			{
+				return this._Cot_W;
+			}
+			set
+			{
+				if ((this._Cot_W != value))
+				{
+					this.OnCot_WChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_W = value;
+					this.SendPropertyChanged("Cot_W");
+					this.OnCot_WChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_X", DbType="NVarChar(255)")]
+		public string Cot_X
+		{
+			get
+			{
+				return this._Cot_X;
+			}
+			set
+			{
+				if ((this._Cot_X != value))
+				{
+					this.OnCot_XChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_X = value;
+					this.SendPropertyChanged("Cot_X");
+					this.OnCot_XChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Y", DbType="NVarChar(255)")]
+		public string Cot_Y
+		{
+			get
+			{
+				return this._Cot_Y;
+			}
+			set
+			{
+				if ((this._Cot_Y != value))
+				{
+					this.OnCot_YChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_Y = value;
+					this.SendPropertyChanged("Cot_Y");
+					this.OnCot_YChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this.OnCot_ZChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_Z = value;
+					this.SendPropertyChanged("Cot_Z");
+					this.OnCot_ZChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA", DbType="NVarChar(255)")]
+		public string Cot_AA
+		{
+			get
+			{
+				return this._Cot_AA;
+			}
+			set
+			{
+				if ((this._Cot_AA != value))
+				{
+					this.OnCot_AAChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AA = value;
+					this.SendPropertyChanged("Cot_AA");
+					this.OnCot_AAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB", DbType="NVarChar(255)")]
+		public string Cot_AB
+		{
+			get
+			{
+				return this._Cot_AB;
+			}
+			set
+			{
+				if ((this._Cot_AB != value))
+				{
+					this.OnCot_ABChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AB = value;
+					this.SendPropertyChanged("Cot_AB");
+					this.OnCot_ABChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AC", DbType="NVarChar(255)")]
+		public string Cot_AC
+		{
+			get
+			{
+				return this._Cot_AC;
+			}
+			set
+			{
+				if ((this._Cot_AC != value))
+				{
+					this.OnCot_ACChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AC = value;
+					this.SendPropertyChanged("Cot_AC");
+					this.OnCot_ACChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AD", DbType="NVarChar(255)")]
+		public string Cot_AD
+		{
+			get
+			{
+				return this._Cot_AD;
+			}
+			set
+			{
+				if ((this._Cot_AD != value))
+				{
+					this.OnCot_ADChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AD = value;
+					this.SendPropertyChanged("Cot_AD");
+					this.OnCot_ADChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE", DbType="NVarChar(255)")]
+		public string Cot_AE
+		{
+			get
+			{
+				return this._Cot_AE;
+			}
+			set
+			{
+				if ((this._Cot_AE != value))
+				{
+					this.OnCot_AEChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AE = value;
+					this.SendPropertyChanged("Cot_AE");
+					this.OnCot_AEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AF", DbType="NVarChar(255)")]
+		public string Cot_AF
+		{
+			get
+			{
+				return this._Cot_AF;
+			}
+			set
+			{
+				if ((this._Cot_AF != value))
+				{
+					this.OnCot_AFChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_AF = value;
+					this.SendPropertyChanged("Cot_AF");
+					this.OnCot_AFChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadFile_Input", DbType="Bit")]
+		public System.Nullable<bool> ReadFile_Input
+		{
+			get
+			{
+				return this._ReadFile_Input;
+			}
+			set
+			{
+				if ((this._ReadFile_Input != value))
+				{
+					this.OnReadFile_InputChanging(value);
+					this.SendPropertyChanging();
+					this._ReadFile_Input = value;
+					this.SendPropertyChanged("ReadFile_Input");
+					this.OnReadFile_InputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_ReadFile_Input", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_ReadFile_Input
+		{
+			get
+			{
+				return this._Date_ReadFile_Input;
+			}
+			set
+			{
+				if ((this._Date_ReadFile_Input != value))
+				{
+					this.OnDate_ReadFile_InputChanging(value);
+					this.SendPropertyChanging();
+					this._Date_ReadFile_Input = value;
+					this.SendPropertyChanged("Date_ReadFile_Input");
+					this.OnDate_ReadFile_InputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitFile_Input", DbType="Bit")]
+		public System.Nullable<bool> SubmitFile_Input
+		{
+			get
+			{
+				return this._SubmitFile_Input;
+			}
+			set
+			{
+				if ((this._SubmitFile_Input != value))
+				{
+					this.OnSubmitFile_InputChanging(value);
+					this.SendPropertyChanging();
+					this._SubmitFile_Input = value;
+					this.SendPropertyChanged("SubmitFile_Input");
+					this.OnSubmitFile_InputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_SubmitFile_Input", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_SubmitFile_Input
+		{
+			get
+			{
+				return this._Date_SubmitFile_Input;
+			}
+			set
+			{
+				if ((this._Date_SubmitFile_Input != value))
+				{
+					this.OnDate_SubmitFile_InputChanging(value);
+					this.SendPropertyChanging();
+					this._Date_SubmitFile_Input = value;
+					this.SendPropertyChanged("Date_SubmitFile_Input");
+					this.OnDate_SubmitFile_InputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadFile_Check", DbType="Bit")]
+		public System.Nullable<bool> ReadFile_Check
+		{
+			get
+			{
+				return this._ReadFile_Check;
+			}
+			set
+			{
+				if ((this._ReadFile_Check != value))
+				{
+					this.OnReadFile_CheckChanging(value);
+					this.SendPropertyChanging();
+					this._ReadFile_Check = value;
+					this.SendPropertyChanged("ReadFile_Check");
+					this.OnReadFile_CheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_ReadFile_Check", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_ReadFile_Check
+		{
+			get
+			{
+				return this._Date_ReadFile_Check;
+			}
+			set
+			{
+				if ((this._Date_ReadFile_Check != value))
+				{
+					this.OnDate_ReadFile_CheckChanging(value);
+					this.SendPropertyChanging();
+					this._Date_ReadFile_Check = value;
+					this.SendPropertyChanged("Date_ReadFile_Check");
+					this.OnDate_ReadFile_CheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitFile_Check", DbType="Bit")]
+		public System.Nullable<bool> SubmitFile_Check
+		{
+			get
+			{
+				return this._SubmitFile_Check;
+			}
+			set
+			{
+				if ((this._SubmitFile_Check != value))
+				{
+					this.OnSubmitFile_CheckChanging(value);
+					this.SendPropertyChanging();
+					this._SubmitFile_Check = value;
+					this.SendPropertyChanged("SubmitFile_Check");
+					this.OnSubmitFile_CheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_SubmitFile_Check", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_SubmitFile_Check
+		{
+			get
+			{
+				return this._Date_SubmitFile_Check;
+			}
+			set
+			{
+				if ((this._Date_SubmitFile_Check != value))
+				{
+					this.OnDate_SubmitFile_CheckChanging(value);
+					this.SendPropertyChanging();
+					this._Date_SubmitFile_Check = value;
+					this.SendPropertyChanged("Date_SubmitFile_Check");
+					this.OnDate_SubmitFile_CheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadFile_Admin", DbType="Bit")]
+		public System.Nullable<bool> ReadFile_Admin
+		{
+			get
+			{
+				return this._ReadFile_Admin;
+			}
+			set
+			{
+				if ((this._ReadFile_Admin != value))
+				{
+					this.OnReadFile_AdminChanging(value);
+					this.SendPropertyChanging();
+					this._ReadFile_Admin = value;
+					this.SendPropertyChanged("ReadFile_Admin");
+					this.OnReadFile_AdminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_ReadFile_Admin", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_ReadFile_Admin
+		{
+			get
+			{
+				return this._Date_ReadFile_Admin;
+			}
+			set
+			{
+				if ((this._Date_ReadFile_Admin != value))
+				{
+					this.OnDate_ReadFile_AdminChanging(value);
+					this.SendPropertyChanging();
+					this._Date_ReadFile_Admin = value;
+					this.SendPropertyChanged("Date_ReadFile_Admin");
+					this.OnDate_ReadFile_AdminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitFile_Admin", DbType="Bit")]
+		public System.Nullable<bool> SubmitFile_Admin
+		{
+			get
+			{
+				return this._SubmitFile_Admin;
+			}
+			set
+			{
+				if ((this._SubmitFile_Admin != value))
+				{
+					this.OnSubmitFile_AdminChanging(value);
+					this.SendPropertyChanging();
+					this._SubmitFile_Admin = value;
+					this.SendPropertyChanged("SubmitFile_Admin");
+					this.OnSubmitFile_AdminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_SubmitFile_Admin", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_SubmitFile_Admin
+		{
+			get
+			{
+				return this._Date_SubmitFile_Admin;
+			}
+			set
+			{
+				if ((this._Date_SubmitFile_Admin != value))
+				{
+					this.OnDate_SubmitFile_AdminChanging(value);
+					this.SendPropertyChanging();
+					this._Date_SubmitFile_Admin = value;
+					this.SendPropertyChanged("Date_SubmitFile_Admin");
+					this.OnDate_SubmitFile_AdminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Error_Input", DbType="Bit")]
+		public System.Nullable<bool> Error_Input
+		{
+			get
+			{
+				return this._Error_Input;
+			}
+			set
+			{
+				if ((this._Error_Input != value))
+				{
+					this.OnError_InputChanging(value);
+					this.SendPropertyChanging();
+					this._Error_Input = value;
+					this.SendPropertyChanged("Error_Input");
+					this.OnError_InputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadFile_Input_2", DbType="Bit")]
+		public System.Nullable<bool> ReadFile_Input_2
+		{
+			get
+			{
+				return this._ReadFile_Input_2;
+			}
+			set
+			{
+				if ((this._ReadFile_Input_2 != value))
+				{
+					this.OnReadFile_Input_2Changing(value);
+					this.SendPropertyChanging();
+					this._ReadFile_Input_2 = value;
+					this.SendPropertyChanged("ReadFile_Input_2");
+					this.OnReadFile_Input_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_ReadFile_Input_2", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_ReadFile_Input_2
+		{
+			get
+			{
+				return this._Date_ReadFile_Input_2;
+			}
+			set
+			{
+				if ((this._Date_ReadFile_Input_2 != value))
+				{
+					this.OnDate_ReadFile_Input_2Changing(value);
+					this.SendPropertyChanging();
+					this._Date_ReadFile_Input_2 = value;
+					this.SendPropertyChanged("Date_ReadFile_Input_2");
+					this.OnDate_ReadFile_Input_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitFile_Input_2", DbType="Bit")]
+		public System.Nullable<bool> SubmitFile_Input_2
+		{
+			get
+			{
+				return this._SubmitFile_Input_2;
+			}
+			set
+			{
+				if ((this._SubmitFile_Input_2 != value))
+				{
+					this.OnSubmitFile_Input_2Changing(value);
+					this.SendPropertyChanging();
+					this._SubmitFile_Input_2 = value;
+					this.SendPropertyChanged("SubmitFile_Input_2");
+					this.OnSubmitFile_Input_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_SubmitFile_Input_2", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_SubmitFile_Input_2
+		{
+			get
+			{
+				return this._Date_SubmitFile_Input_2;
+			}
+			set
+			{
+				if ((this._Date_SubmitFile_Input_2 != value))
+				{
+					this.OnDate_SubmitFile_Input_2Changing(value);
+					this.SendPropertyChanging();
+					this._Date_SubmitFile_Input_2 = value;
+					this.SendPropertyChanged("Date_SubmitFile_Input_2");
+					this.OnDate_SubmitFile_Input_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Error_Check", DbType="Bit")]
+		public System.Nullable<bool> Error_Check
+		{
+			get
+			{
+				return this._Error_Check;
+			}
+			set
+			{
+				if ((this._Error_Check != value))
+				{
+					this.OnError_CheckChanging(value);
+					this.SendPropertyChanging();
+					this._Error_Check = value;
+					this.SendPropertyChanged("Error_Check");
+					this.OnError_CheckChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReadFile_Check_2", DbType="Bit")]
+		public System.Nullable<bool> ReadFile_Check_2
+		{
+			get
+			{
+				return this._ReadFile_Check_2;
+			}
+			set
+			{
+				if ((this._ReadFile_Check_2 != value))
+				{
+					this.OnReadFile_Check_2Changing(value);
+					this.SendPropertyChanging();
+					this._ReadFile_Check_2 = value;
+					this.SendPropertyChanged("ReadFile_Check_2");
+					this.OnReadFile_Check_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_ReadFile_Check_2", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_ReadFile_Check_2
+		{
+			get
+			{
+				return this._Date_ReadFile_Check_2;
+			}
+			set
+			{
+				if ((this._Date_ReadFile_Check_2 != value))
+				{
+					this.OnDate_ReadFile_Check_2Changing(value);
+					this.SendPropertyChanging();
+					this._Date_ReadFile_Check_2 = value;
+					this.SendPropertyChanged("Date_ReadFile_Check_2");
+					this.OnDate_ReadFile_Check_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SubmitFile_Check_2", DbType="Bit")]
+		public System.Nullable<bool> SubmitFile_Check_2
+		{
+			get
+			{
+				return this._SubmitFile_Check_2;
+			}
+			set
+			{
+				if ((this._SubmitFile_Check_2 != value))
+				{
+					this.OnSubmitFile_Check_2Changing(value);
+					this.SendPropertyChanging();
+					this._SubmitFile_Check_2 = value;
+					this.SendPropertyChanged("SubmitFile_Check_2");
+					this.OnSubmitFile_Check_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_SubmitFile_Check_2", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_SubmitFile_Check_2
+		{
+			get
+			{
+				return this._Date_SubmitFile_Check_2;
+			}
+			set
+			{
+				if ((this._Date_SubmitFile_Check_2 != value))
+				{
+					this.OnDate_SubmitFile_Check_2Changing(value);
+					this.SendPropertyChanging();
+					this._Date_SubmitFile_Check_2 = value;
+					this.SendPropertyChanged("Date_SubmitFile_Check_2");
+					this.OnDate_SubmitFile_Check_2Changed();
 				}
 			}
 		}
@@ -3455,360 +4602,325 @@ namespace Nencho
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_File")]
-	public partial class tbl_File : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_User")]
+	public partial class tbl_User : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private long _ID;
+		private string _UserName;
 		
-		private string _fBatchName;
+		private string _Password;
 		
-		private string _Cot_C;
+		private string _IdRole;
 		
-		private string _Cot_D;
+		private string _Nhanvien;
 		
-		private string _Cot_E;
-		
-		private string _Cot_F;
-		
-		private string _Cot_G;
-		
-		private string _Cot_H;
-		
-		private string _Cot_I;
-		
-		private string _Cot_J;
-		
-		private string _Cot_K;
-		
-		private string _Cot_L;
-		
-		private string _Cot_M;
-		
-		private string _Cot_N;
-		
-		private string _Cot_O;
-		
-		private string _Cot_P;
-		
-		private string _Cot_Q;
-		
-		private string _Cot_R;
-		
-		private string _Cot_S;
-		
-		private string _Cot_T;
-		
-		private string _Cot_U;
-		
-		private string _Cot_V;
-		
-		private string _Cot_W;
-		
-		private string _Cot_X;
-		
-		private string _Cot_Y;
-		
-		private string _Cot_Z;
-		
-		private string _Cot_AA;
-		
-		private string _Cot_AB;
-		
-		private string _Cot_AC;
-		
-		private string _Cot_AD;
-		
-		private string _Cot_AE;
-		
-		private string _Cot_AF;
-		
-		private System.Nullable<bool> _ReadFile_Input;
-		
-		private System.Nullable<System.DateTime> _Date_ReadFile_Input;
-		
-		private System.Nullable<bool> _SubmitFile_Input;
-		
-		private System.Nullable<System.DateTime> _Date_SubmitFile_Input;
-		
-		private System.Nullable<bool> _ReadFile_Check;
-		
-		private System.Nullable<System.DateTime> _Date_ReadFile_Check;
-		
-		private System.Nullable<bool> _SubmitFile_Check;
-		
-		private System.Nullable<System.DateTime> _Date_SubmitFile_Check;
-		
-		private System.Nullable<bool> _ReadFile_Admin;
-		
-		private System.Nullable<System.DateTime> _Date_ReadFile_Admin;
-		
-		private System.Nullable<bool> _SubmitFile_Admin;
-		
-		private System.Nullable<System.DateTime> _Date_SubmitFile_Admin;
-		
-		private System.Nullable<bool> _Error_Input;
-		
-		private System.Nullable<bool> _ReadFile_Input_2;
-		
-		private System.Nullable<System.DateTime> _Date_ReadFile_Input_2;
-		
-		private System.Nullable<bool> _SubmitFile_Input_2;
-		
-		private System.Nullable<System.DateTime> _Date_SubmitFile_Input_2;
-		
-		private System.Nullable<bool> _Error_Check;
-		
-		private System.Nullable<bool> _ReadFile_Check_2;
-		
-		private System.Nullable<System.DateTime> _Date_ReadFile_Check_2;
-		
-		private System.Nullable<bool> _SubmitFile_Check_2;
-		
-		private System.Nullable<System.DateTime> _Date_SubmitFile_Check_2;
+		private string _Token;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDChanging(long value);
-    partial void OnIDChanged();
-    partial void OnfBatchNameChanging(string value);
-    partial void OnfBatchNameChanged();
-    partial void OnCot_CChanging(string value);
-    partial void OnCot_CChanged();
-    partial void OnCot_DChanging(string value);
-    partial void OnCot_DChanged();
-    partial void OnCot_EChanging(string value);
-    partial void OnCot_EChanged();
-    partial void OnCot_FChanging(string value);
-    partial void OnCot_FChanged();
-    partial void OnCot_GChanging(string value);
-    partial void OnCot_GChanged();
-    partial void OnCot_HChanging(string value);
-    partial void OnCot_HChanged();
-    partial void OnCot_IChanging(string value);
-    partial void OnCot_IChanged();
-    partial void OnCot_JChanging(string value);
-    partial void OnCot_JChanged();
-    partial void OnCot_KChanging(string value);
-    partial void OnCot_KChanged();
-    partial void OnCot_LChanging(string value);
-    partial void OnCot_LChanged();
-    partial void OnCot_MChanging(string value);
-    partial void OnCot_MChanged();
-    partial void OnCot_NChanging(string value);
-    partial void OnCot_NChanged();
-    partial void OnCot_OChanging(string value);
-    partial void OnCot_OChanged();
-    partial void OnCot_PChanging(string value);
-    partial void OnCot_PChanged();
-    partial void OnCot_QChanging(string value);
-    partial void OnCot_QChanged();
-    partial void OnCot_RChanging(string value);
-    partial void OnCot_RChanged();
-    partial void OnCot_SChanging(string value);
-    partial void OnCot_SChanged();
-    partial void OnCot_TChanging(string value);
-    partial void OnCot_TChanged();
-    partial void OnCot_UChanging(string value);
-    partial void OnCot_UChanged();
-    partial void OnCot_VChanging(string value);
-    partial void OnCot_VChanged();
-    partial void OnCot_WChanging(string value);
-    partial void OnCot_WChanged();
-    partial void OnCot_XChanging(string value);
-    partial void OnCot_XChanged();
-    partial void OnCot_YChanging(string value);
-    partial void OnCot_YChanged();
-    partial void OnCot_ZChanging(string value);
-    partial void OnCot_ZChanged();
-    partial void OnCot_AAChanging(string value);
-    partial void OnCot_AAChanged();
-    partial void OnCot_ABChanging(string value);
-    partial void OnCot_ABChanged();
-    partial void OnCot_ACChanging(string value);
-    partial void OnCot_ACChanged();
-    partial void OnCot_ADChanging(string value);
-    partial void OnCot_ADChanged();
-    partial void OnCot_AEChanging(string value);
-    partial void OnCot_AEChanged();
-    partial void OnCot_AFChanging(string value);
-    partial void OnCot_AFChanged();
-    partial void OnReadFile_InputChanging(System.Nullable<bool> value);
-    partial void OnReadFile_InputChanged();
-    partial void OnDate_ReadFile_InputChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_ReadFile_InputChanged();
-    partial void OnSubmitFile_InputChanging(System.Nullable<bool> value);
-    partial void OnSubmitFile_InputChanged();
-    partial void OnDate_SubmitFile_InputChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_SubmitFile_InputChanged();
-    partial void OnReadFile_CheckChanging(System.Nullable<bool> value);
-    partial void OnReadFile_CheckChanged();
-    partial void OnDate_ReadFile_CheckChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_ReadFile_CheckChanged();
-    partial void OnSubmitFile_CheckChanging(System.Nullable<bool> value);
-    partial void OnSubmitFile_CheckChanged();
-    partial void OnDate_SubmitFile_CheckChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_SubmitFile_CheckChanged();
-    partial void OnReadFile_AdminChanging(System.Nullable<bool> value);
-    partial void OnReadFile_AdminChanged();
-    partial void OnDate_ReadFile_AdminChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_ReadFile_AdminChanged();
-    partial void OnSubmitFile_AdminChanging(System.Nullable<bool> value);
-    partial void OnSubmitFile_AdminChanged();
-    partial void OnDate_SubmitFile_AdminChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_SubmitFile_AdminChanged();
-    partial void OnError_InputChanging(System.Nullable<bool> value);
-    partial void OnError_InputChanged();
-    partial void OnReadFile_Input_2Changing(System.Nullable<bool> value);
-    partial void OnReadFile_Input_2Changed();
-    partial void OnDate_ReadFile_Input_2Changing(System.Nullable<System.DateTime> value);
-    partial void OnDate_ReadFile_Input_2Changed();
-    partial void OnSubmitFile_Input_2Changing(System.Nullable<bool> value);
-    partial void OnSubmitFile_Input_2Changed();
-    partial void OnDate_SubmitFile_Input_2Changing(System.Nullable<System.DateTime> value);
-    partial void OnDate_SubmitFile_Input_2Changed();
-    partial void OnError_CheckChanging(System.Nullable<bool> value);
-    partial void OnError_CheckChanged();
-    partial void OnReadFile_Check_2Changing(System.Nullable<bool> value);
-    partial void OnReadFile_Check_2Changed();
-    partial void OnDate_ReadFile_Check_2Changing(System.Nullable<System.DateTime> value);
-    partial void OnDate_ReadFile_Check_2Changed();
-    partial void OnSubmitFile_Check_2Changing(System.Nullable<bool> value);
-    partial void OnSubmitFile_Check_2Changed();
-    partial void OnDate_SubmitFile_Check_2Changing(System.Nullable<System.DateTime> value);
-    partial void OnDate_SubmitFile_Check_2Changed();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnIdRoleChanging(string value);
+    partial void OnIdRoleChanged();
+    partial void OnNhanvienChanging(string value);
+    partial void OnNhanvienChanged();
+    partial void OnTokenChanging(string value);
+    partial void OnTokenChanged();
     #endregion
 		
-		public tbl_File()
+		public tbl_User()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string UserName
 		{
 			get
 			{
-				return this._ID;
+				return this._UserName;
 			}
 			set
 			{
-				if ((this._ID != value))
+				if ((this._UserName != value))
 				{
-					this.OnIDChanging(value);
+					this.OnUserNameChanging(value);
 					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
+		public string Password
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._Password;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._Password != value))
 				{
-					this.OnfBatchNameChanging(value);
+					this.OnPasswordChanging(value);
 					this.SendPropertyChanging();
-					this._fBatchName = value;
-					this.SendPropertyChanged("fBatchName");
-					this.OnfBatchNameChanged();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_C", DbType="NVarChar(255)")]
-		public string Cot_C
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
+		public string IdRole
 		{
 			get
 			{
-				return this._Cot_C;
+				return this._IdRole;
 			}
 			set
 			{
-				if ((this._Cot_C != value))
+				if ((this._IdRole != value))
 				{
-					this.OnCot_CChanging(value);
+					this.OnIdRoleChanging(value);
 					this.SendPropertyChanging();
-					this._Cot_C = value;
-					this.SendPropertyChanged("Cot_C");
-					this.OnCot_CChanged();
+					this._IdRole = value;
+					this.SendPropertyChanged("IdRole");
+					this.OnIdRoleChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_D", DbType="NVarChar(255)")]
-		public string Cot_D
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
+		public string Nhanvien
 		{
 			get
 			{
-				return this._Cot_D;
+				return this._Nhanvien;
 			}
 			set
 			{
-				if ((this._Cot_D != value))
+				if ((this._Nhanvien != value))
 				{
-					this.OnCot_DChanging(value);
+					this.OnNhanvienChanging(value);
 					this.SendPropertyChanging();
-					this._Cot_D = value;
-					this.SendPropertyChanged("Cot_D");
-					this.OnCot_DChanged();
+					this._Nhanvien = value;
+					this.SendPropertyChanged("Nhanvien");
+					this.OnNhanvienChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_E", DbType="NVarChar(255)")]
-		public string Cot_E
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
+		public string Token
 		{
 			get
 			{
-				return this._Cot_E;
-				}
+				return this._Token;
+			}
 			set
 			{
-				if ((this._Cot_E != value))
+				if ((this._Token != value))
 				{
-					this.OnCot_EChanging(value);
+					this.OnTokenChanging(value);
 					this.SendPropertyChanging();
-					this._Cot_E = value;
-					this.SendPropertyChanged("Cot_E");
-					this.OnCot_EChanged();
+					this._Token = value;
+					this.SendPropertyChanged("Token");
+					this.OnTokenChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
 	
-	public partial class GetRoLeResult
+	public partial class GetBatchResult
 	{
 		
-		private string _Column1;
+		private string _Cot_Z;
 		
-		public GetRoLeResult()
+		public GetBatchResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
-		public string Column1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._Column1;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._Column1 != value))
+				if ((this._Cot_Z != value))
 				{
-					this._Column1 = value;
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatchAdminResult
+	{
+		
+		private string _Cot_Z;
+		
+		public GetBatchAdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatchCheckerResult
+	{
+		
+		private string _Cot_Z;
+		
+		public GetBatchCheckerResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatchDEResult
+	{
+		
+		private string _Cot_Z;
+		
+		public GetBatchDEResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetListRoleResult
+	{
+		
+		private string _IdRole;
+		
+		private string _RoleName;
+		
+		private string _GhiChu;
+		
+		public GetListRoleResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string IdRole
+		{
+			get
+			{
+				return this._IdRole;
+			}
+			set
+			{
+				if ((this._IdRole != value))
+				{
+					this._IdRole = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(200)")]
+		public string RoleName
+		{
+			get
+			{
+				return this._RoleName;
+			}
+			set
+			{
+				if ((this._RoleName != value))
+				{
+					this._RoleName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this._GhiChu = value;
 				}
 			}
 		}
@@ -3889,84 +5001,6 @@ namespace Nencho
 				if ((this._Nhanvien != value))
 				{
 					this._Nhanvien = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetBatchDEResult
-	{
-		
-		private string _Cot_Z;
-		
-		public GetBatchDEResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetBatchCheckerResult
-	{
-		
-		private string _Cot_Z;
-		
-		public GetBatchCheckerResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetBatchAdminResult
-	{
-		
-		private string _Cot_Z;
-		
-		public GetBatchAdminResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
 				}
 			}
 		}
