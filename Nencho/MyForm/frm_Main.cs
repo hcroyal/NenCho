@@ -36,11 +36,16 @@ namespace Nencho.MyForm
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
-            if (Global.StrRole == "Admin")
+            if (Global.StrRole == "ADMIN")
             {
                 baritem_Manager.Enabled = true;
 
             }
+        }
+
+        private void btn_ManagerFiles_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_ManagerFile().ShowDialog();
         }
     }
 }

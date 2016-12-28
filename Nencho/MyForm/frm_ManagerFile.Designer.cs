@@ -78,6 +78,7 @@
             // 
             resources.ApplyResources(this.btn_DeleteBatch, "btn_DeleteBatch");
             this.btn_DeleteBatch.Name = "btn_DeleteBatch";
+            this.btn_DeleteBatch.Click += new System.EventHandler(this.btn_DeleteBatch_Click);
             // 
             // btn_AddBatch
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frm_ManagerFile";
+            this.Load += new System.EventHandler(this.frm_ManagerFile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
