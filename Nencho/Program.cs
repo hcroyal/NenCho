@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryLogin;
 using Nencho.MyForm;
@@ -51,40 +48,55 @@ namespace Nencho
             while (temp);
         }
 
-        private static void a_ButtonLoginEven(int iLogin, string StrMachine, string StrUserWindow, string StrIpAddress, string Strusername, string Password, string Strbatch, string Strrole, string Strtoken)
+        private static void a_ButtonLoginEven(int iLogin, string strMachine, string strUserWindow, string strIpAddress, string strUsername, string password, string strBatch, string strRole, string strToken)
         {
             if (iLogin == 1)
             {
-                Global.DataNencho.InsertLoginTime(Strusername, DateTime.Now, StrUserWindow, StrMachine, StrIpAddress, Strtoken);
-                Global.DataNencho.UpdateToken_TableUser(Strusername, Strtoken);
+                Global.DataNencho.InsertLoginTime(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken);
+                Global.DataNencho.UpdateToken_TableUser(strUsername, strToken);
             }
         }
 
-        private static void a_LoginEvent(string Username, string Password, ref string StrVersion, ref int iKiemtraLogin, ref string Role, ref ComboBox cbb)
+        private static void a_LoginEvent(string username, string password, ref string strVersion, ref int iKiemtraLogin, ref string role, ref ComboBox cbb)
         {
             try
             {
-                iKiemtraLogin = Global.DataNencho.KiemTraLogin(Username, Password);
-                StrVersion = (from w in Global.DataNencho.tbl_Versions where w.IdProject == "Nencho" select w.Version).FirstOrDefault();
-                Role=(from w in Global.DataNencho.GetRoLe(Username) select w.Column1).FirstOrDefault();
-                if (iKiemtraLogin==1 && Role == "DE")
+                iKiemtraLogin = Global.DataNencho.KiemTraLogin(username, password);
+                strVersion = (from w in Global.DataNencho.tbl_Versions where w.IdProject == "Nencho" select w.Version).FirstOrDefault();
+                role=(from w in Global.DataNencho.GetRoLeUser(username) select w.Column1).FirstOrDefault();
+                if (iKiemtraLogin==1 && role == "DE ")
                 {
-                    cbb.DataSource = Global.DataNencho.GetBatchDE(Username);
+                    cbb.DataSource = Global.DataNencho.GetBatchDE(username);
                     cbb.DisplayMember = "Cot_Z"; 
                 }
-                else if (iKiemtraLogin==1 && Role =="Checker")
+                else if (iKiemtraLogin == 1 && role == "CHECKER ")
                 {
-                    cbb.DataSource = Global.DataNencho.GetBatchChecker(Username);
+                    cbb.DataSource = Global.DataNencho.GetBatchChecker(username);
                     cbb.DisplayMember = "Cot_Z"; 
                 }
-                else if (iKiemtraLogin == 1 && Role == "Admin")
+                else if (iKiemtraLogin == 1 && role == "ADMIN")
                 {
-                    cbb.DataSource = Global.DataNencho.GetBatchAdmin(Username);
+                    cbb.DataSource = Global.DataNencho.GetBatchAdmin(username);
                     cbb.DisplayMember = "Cot_Z"; 
                 }
-                else if (iKiemtraLogin == 1 && Role == "DE, Checker")
+                else if (iKiemtraLogin == 1 && role == "DE CHECKER")
                 {
-                    cbb.DataSource = Global.DataNencho.GetBatchAdmin(Username);
+                    cbb.DataSource = Global.DataNencho.GetBatchDE_Cheker(username);
+                    cbb.DisplayMember = "Cot_Z";
+                }
+                else if (iKiemtraLogin == 1 && role == "DE ADMIN")
+                {
+                    cbb.DataSource = Global.DataNencho.GetBatchDE_Admin(username);
+                    cbb.DisplayMember = "Cot_Z";
+                }
+                else if (iKiemtraLogin == 1 && role == "CHECKER ADMIN")
+                {
+                    cbb.DataSource = Global.DataNencho.GetBatchChecker_Admin(username);
+                    cbb.DisplayMember = "Cot_Z";
+                }
+                else if (iKiemtraLogin == 1 && role == "DE CHECKER ADMIN")
+                {
+                    cbb.DataSource = Global.DataNencho.GetBatchDe_Checker_Admin(username);
                     cbb.DisplayMember = "Cot_Z";
                 }
             }
