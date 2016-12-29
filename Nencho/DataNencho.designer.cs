@@ -322,6 +322,13 @@ namespace Nencho
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
 			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDivision")]
+		public ISingleResult<GetDivisionResult> GetDivision()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetDivisionResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Admin")]
@@ -5057,6 +5064,446 @@ namespace Nencho
 				if ((this._Column1 != value))
 				{
 					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDivisionResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_J;
+		
+		private string _Cot_K;
+		
+		private string _Cot_M;
+		
+		private string _Cot_N;
+		
+		private string _Cot_O;
+		
+		private string _Cot_P;
+		
+		private string _Cot_Q;
+		
+		private string _Cot_R;
+		
+		private string _Cot_S;
+		
+		private string _Cot_T;
+		
+		private string _Cot_U;
+		
+		private string _Cot_X;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _Cot_Y;
+		
+		private string _Cot_V;
+		
+		private string _Cot_Z;
+		
+		private System.Nullable<int> _soluong;
+		
+		private string _Cot_AA;
+		
+		private string _Cot_AB;
+		
+		private string _Cot_AC;
+		
+		private string _Cot_AD;
+		
+		private string _Cot_AE;
+		
+		private string _Cot_AF;
+		
+		public GetDivisionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_J", DbType="NVarChar(255)")]
+		public string Cot_J
+		{
+			get
+			{
+				return this._Cot_J;
+			}
+			set
+			{
+				if ((this._Cot_J != value))
+				{
+					this._Cot_J = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_K", DbType="NVarChar(255)")]
+		public string Cot_K
+		{
+			get
+			{
+				return this._Cot_K;
+			}
+			set
+			{
+				if ((this._Cot_K != value))
+				{
+					this._Cot_K = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_M", DbType="NVarChar(255)")]
+		public string Cot_M
+		{
+			get
+			{
+				return this._Cot_M;
+			}
+			set
+			{
+				if ((this._Cot_M != value))
+				{
+					this._Cot_M = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_N", DbType="NVarChar(255)")]
+		public string Cot_N
+		{
+			get
+			{
+				return this._Cot_N;
+			}
+			set
+			{
+				if ((this._Cot_N != value))
+				{
+					this._Cot_N = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_O", DbType="NVarChar(255)")]
+		public string Cot_O
+		{
+			get
+			{
+				return this._Cot_O;
+			}
+			set
+			{
+				if ((this._Cot_O != value))
+				{
+					this._Cot_O = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_P", DbType="NVarChar(255)")]
+		public string Cot_P
+		{
+			get
+			{
+				return this._Cot_P;
+			}
+			set
+			{
+				if ((this._Cot_P != value))
+				{
+					this._Cot_P = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Q", DbType="NVarChar(255)")]
+		public string Cot_Q
+		{
+			get
+			{
+				return this._Cot_Q;
+			}
+			set
+			{
+				if ((this._Cot_Q != value))
+				{
+					this._Cot_Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_R", DbType="NVarChar(255)")]
+		public string Cot_R
+		{
+			get
+			{
+				return this._Cot_R;
+			}
+			set
+			{
+				if ((this._Cot_R != value))
+				{
+					this._Cot_R = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_S", DbType="NVarChar(255)")]
+		public string Cot_S
+		{
+			get
+			{
+				return this._Cot_S;
+			}
+			set
+			{
+				if ((this._Cot_S != value))
+				{
+					this._Cot_S = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_T", DbType="NVarChar(255)")]
+		public string Cot_T
+		{
+			get
+			{
+				return this._Cot_T;
+			}
+			set
+			{
+				if ((this._Cot_T != value))
+				{
+					this._Cot_T = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_U", DbType="NVarChar(255)")]
+		public string Cot_U
+		{
+			get
+			{
+				return this._Cot_U;
+			}
+			set
+			{
+				if ((this._Cot_U != value))
+				{
+					this._Cot_U = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_X", DbType="NVarChar(255)")]
+		public string Cot_X
+		{
+			get
+			{
+				return this._Cot_X;
+			}
+			set
+			{
+				if ((this._Cot_X != value))
+				{
+					this._Cot_X = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Y", DbType="NVarChar(255)")]
+		public string Cot_Y
+		{
+			get
+			{
+				return this._Cot_Y;
+			}
+			set
+			{
+				if ((this._Cot_Y != value))
+				{
+					this._Cot_Y = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_V", DbType="NVarChar(255)")]
+		public string Cot_V
+		{
+			get
+			{
+				return this._Cot_V;
+			}
+			set
+			{
+				if ((this._Cot_V != value))
+				{
+					this._Cot_V = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA", DbType="NVarChar(255)")]
+		public string Cot_AA
+		{
+			get
+			{
+				return this._Cot_AA;
+			}
+			set
+			{
+				if ((this._Cot_AA != value))
+				{
+					this._Cot_AA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB", DbType="NVarChar(255)")]
+		public string Cot_AB
+		{
+			get
+			{
+				return this._Cot_AB;
+			}
+			set
+			{
+				if ((this._Cot_AB != value))
+				{
+					this._Cot_AB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AC", DbType="NVarChar(255)")]
+		public string Cot_AC
+		{
+			get
+			{
+				return this._Cot_AC;
+			}
+			set
+			{
+				if ((this._Cot_AC != value))
+				{
+					this._Cot_AC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AD", DbType="NVarChar(255)")]
+		public string Cot_AD
+		{
+			get
+			{
+				return this._Cot_AD;
+			}
+			set
+			{
+				if ((this._Cot_AD != value))
+				{
+					this._Cot_AD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE", DbType="NVarChar(255)")]
+		public string Cot_AE
+		{
+			get
+			{
+				return this._Cot_AE;
+			}
+			set
+			{
+				if ((this._Cot_AE != value))
+				{
+					this._Cot_AE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AF", DbType="NVarChar(255)")]
+		public string Cot_AF
+		{
+			get
+			{
+				return this._Cot_AF;
+			}
+			set
+			{
+				if ((this._Cot_AF != value))
+				{
+					this._Cot_AF = value;
 				}
 			}
 		}

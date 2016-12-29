@@ -352,4 +352,32 @@
       <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetDivision" Method="GetDivision">
+    <ElementType Name="GetDivisionResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_J" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_K" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_M" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_N" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_O" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_P" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Q" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_R" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_S" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_T" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_U" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_X" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cot_Y" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_V" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cot_AA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AB" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
