@@ -270,11 +270,6 @@
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.GetBatch" Method="GetBatch">
-    <ElementType Name="GetBatchResult">
-      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GetBatchAdmin" Method="GetBatchAdmin">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
     <ElementType Name="GetBatchAdminResult">
@@ -287,17 +282,34 @@
       <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetBatchChecker_Admin" Method="GetBatchChecker_Admin">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(250)" />
+    <ElementType Name="GetBatchChecker_AdminResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GetBatchDE" Method="GetBatchDE">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
     <ElementType Name="GetBatchDEResult">
       <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetListRole" Method="GetListRole">
-    <ElementType Name="GetListRoleResult">
-      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="RoleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+  <Function Name="dbo.GetBatchDE_Admin" Method="GetBatchDE_Admin">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(250)" />
+    <ElementType Name="GetBatchDE_AdminResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatchDe_Checker_Admin" Method="GetBatchDe_Checker_Admin">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(250)" />
+    <ElementType Name="GetBatchDe_Checker_AdminResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatchDE_Cheker" Method="GetBatchDE_Cheker">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatchDE_ChekerResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.GetListUser" Method="GetListUser">
@@ -306,12 +318,6 @@
       <Column Name="Password" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="IdRole" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetRoLe" Method="GetRoLe">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
-    <ElementType Name="GetRoLeResult">
-      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
@@ -339,5 +345,11 @@
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
     <Parameter Name="ToKen" Parameter="toKen" Type="System.String" DbType="NVarChar(200)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetRoLeUser" Method="GetRoLeUser">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(250)" />
+    <ElementType Name="GetRoLeUserResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

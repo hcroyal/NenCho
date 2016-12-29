@@ -232,13 +232,6 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatch")]
-		public ISingleResult<GetBatchResult> GetBatch()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetBatchResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchAdmin")]
 		public ISingleResult<GetBatchAdminResult> GetBatchAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
 		{
@@ -253,6 +246,13 @@ namespace Nencho
 			return ((ISingleResult<GetBatchCheckerResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchChecker_Admin")]
+		public ISingleResult<GetBatchChecker_AdminResult> GetBatchChecker_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatchChecker_AdminResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDE")]
 		public ISingleResult<GetBatchDEResult> GetBatchDE([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
 		{
@@ -260,11 +260,25 @@ namespace Nencho
 			return ((ISingleResult<GetBatchDEResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListRole")]
-		public ISingleResult<GetListRoleResult> GetListRole()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDE_Admin")]
+		public ISingleResult<GetBatchDE_AdminResult> GetBatchDE_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetListRoleResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatchDE_AdminResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDe_Checker_Admin")]
+		public ISingleResult<GetBatchDe_Checker_AdminResult> GetBatchDe_Checker_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatchDe_Checker_AdminResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchDE_Cheker")]
+		public ISingleResult<GetBatchDE_ChekerResult> GetBatchDE_Cheker([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatchDE_ChekerResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
@@ -272,13 +286,6 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLe")]
-		public ISingleResult<GetRoLeResult> GetRoLe([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetRoLeResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime")]
@@ -307,6 +314,13 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, toKen);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeUser")]
+		public ISingleResult<GetRoLeUserResult> GetRoLeUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -4760,32 +4774,6 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetBatchResult
-	{
-		
-		private string _Cot_Z;
-		
-		public GetBatchResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-	}
-	
 	public partial class GetBatchAdminResult
 	{
 		
@@ -4838,6 +4826,32 @@ namespace Nencho
 		}
 	}
 	
+	public partial class GetBatchChecker_AdminResult
+	{
+		
+		private string _Cot_Z;
+		
+		public GetBatchChecker_AdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
 	public partial class GetBatchDEResult
 	{
 		
@@ -4864,63 +4878,79 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetListRoleResult
+	public partial class GetBatchDE_AdminResult
 	{
 		
-		private string _IdRole;
+		private string _Cot_Z;
 		
-		private string _RoleName;
-		
-		private string _GhiChu;
-		
-		public GetListRoleResult()
+		public GetBatchDE_AdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
-		public string IdRole
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._IdRole;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._IdRole != value))
+				if ((this._Cot_Z != value))
 				{
-					this._IdRole = value;
+					this._Cot_Z = value;
 				}
 			}
 		}
+	}
+	
+	public partial class GetBatchDe_Checker_AdminResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(200)")]
-		public string RoleName
+		private string _Cot_Z;
+		
+		public GetBatchDe_Checker_AdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._RoleName;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._RoleName != value))
+				if ((this._Cot_Z != value))
 				{
-					this._RoleName = value;
+					this._Cot_Z = value;
 				}
 			}
 		}
+	}
+	
+	public partial class GetBatchDE_ChekerResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
-		public string GhiChu
+		private string _Cot_Z;
+		
+		public GetBatchDE_ChekerResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._GhiChu;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._GhiChu != value))
+				if ((this._Cot_Z != value))
 				{
-					this._GhiChu = value;
+					this._Cot_Z = value;
 				}
 			}
 		}
@@ -5006,12 +5036,12 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetRoLeResult
+	public partial class GetRoLeUserResult
 	{
 		
 		private string _Column1;
 		
-		public GetRoLeResult()
+		public GetRoLeUserResult()
 		{
 		}
 		
