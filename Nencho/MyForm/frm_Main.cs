@@ -39,7 +39,11 @@ namespace Nencho.MyForm
             if (Global.StrRole == "ADMIN")
             {
                 baritem_Manager.Enabled = true;
-
+                tab_phancong.PageVisible = true;
+                tab_admin.PageVisible = true;
+                tab_checker1.PageVisible = true;
+                tab_checker2.PageVisible = true;
+                tab_error.PageVisible = true;
             }
         }
 

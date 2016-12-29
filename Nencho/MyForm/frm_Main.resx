@@ -242,6 +242,109 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1119, 628</value>
   </data>
+  <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 20</value>
+  </data>
+  <data name="tab_phancong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="tab_phancong.Text" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="&gt;&gt;tab_phancong.Name" xml:space="preserve">
+    <value>tab_phancong</value>
+  </data>
+  <data name="&gt;&gt;tab_phancong.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tab_phancong.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab_phancong.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1119, 608</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tab_checker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="tab_checker1.Text" xml:space="preserve">
+    <value>Checker 1</value>
+  </data>
+  <data name="&gt;&gt;tab_checker1.Name" xml:space="preserve">
+    <value>tab_checker1</value>
+  </data>
+  <data name="&gt;&gt;tab_checker1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tab_checker1.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab_checker1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tab_checker2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="tab_checker2.Text" xml:space="preserve">
+    <value>Checker 2</value>
+  </data>
+  <data name="&gt;&gt;tab_checker2.Name" xml:space="preserve">
+    <value>tab_checker2</value>
+  </data>
+  <data name="&gt;&gt;tab_checker2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tab_checker2.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab_checker2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tab_admin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="tab_admin.Text" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="&gt;&gt;tab_admin.Name" xml:space="preserve">
+    <value>tab_admin</value>
+  </data>
+  <data name="&gt;&gt;tab_admin.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tab_admin.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab_admin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tab_error.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="tab_error.Text" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="&gt;&gt;tab_error.Name" xml:space="preserve">
+    <value>tab_error</value>
+  </data>
+  <data name="&gt;&gt;tab_error.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tab_error.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab_error.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
     <value>xtraTabControl1</value>
   </data>
@@ -319,120 +422,5 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 20</value>
-  </data>
-  <data name="tab_phanquyen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="tab_phanquyen.Text" xml:space="preserve">
-    <value>Phân quyền</value>
-  </data>
-  <data name="&gt;&gt;tab_phanquyen.Name" xml:space="preserve">
-    <value>tab_phanquyen</value>
-  </data>
-  <data name="&gt;&gt;tab_phanquyen.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;tab_phanquyen.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;tab_phanquyen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1119, 608</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tab_checker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="tab_checker1.Text" xml:space="preserve">
-    <value>Checker 1</value>
-  </data>
-  <data name="&gt;&gt;tab_checker1.Name" xml:space="preserve">
-    <value>tab_checker1</value>
-  </data>
-  <data name="&gt;&gt;tab_checker1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;tab_checker1.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;tab_checker1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tab_checker2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="tab_checker2.Text" xml:space="preserve">
-    <value>Checker 2</value>
-  </data>
-  <data name="&gt;&gt;tab_checker2.Name" xml:space="preserve">
-    <value>tab_checker2</value>
-  </data>
-  <data name="&gt;&gt;tab_checker2.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;tab_checker2.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;tab_checker2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tab_admin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="tab_admin.Text" xml:space="preserve">
-    <value>Admin</value>
-  </data>
-  <data name="&gt;&gt;tab_admin.Name" xml:space="preserve">
-    <value>tab_admin</value>
-  </data>
-  <data name="&gt;&gt;tab_admin.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;tab_admin.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;tab_admin.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="xtraTabPage1.Text" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
-    <value>xtraTabPage1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
 </root>

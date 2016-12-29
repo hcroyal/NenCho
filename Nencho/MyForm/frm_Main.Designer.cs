@@ -44,11 +44,11 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.tab_phanquyen = new DevExpress.XtraTab.XtraTabPage();
+            this.tab_phancong = new DevExpress.XtraTab.XtraTabPage();
             this.tab_checker1 = new DevExpress.XtraTab.XtraTabPage();
             this.tab_checker2 = new DevExpress.XtraTab.XtraTabPage();
             this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.tab_error = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -167,18 +167,18 @@
             // 
             resources.ApplyResources(this.xtraTabControl1, "xtraTabControl1");
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tab_phanquyen;
+            this.xtraTabControl1.SelectedTabPage = this.tab_phancong;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tab_phanquyen,
+            this.tab_phancong,
             this.tab_checker1,
             this.tab_checker2,
             this.tab_admin,
-            this.xtraTabPage1});
+            this.tab_error});
             // 
-            // tab_phanquyen
+            // tab_phancong
             // 
-            this.tab_phanquyen.Name = "tab_phanquyen";
-            resources.ApplyResources(this.tab_phanquyen, "tab_phanquyen");
+            this.tab_phancong.Name = "tab_phancong";
+            resources.ApplyResources(this.tab_phancong, "tab_phancong");
             // 
             // tab_checker1
             // 
@@ -198,11 +198,11 @@
             this.tab_admin.PageVisible = false;
             resources.ApplyResources(this.tab_admin, "tab_admin");
             // 
-            // xtraTabPage1
+            // tab_error
             // 
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.PageVisible = false;
-            resources.ApplyResources(this.xtraTabPage1, "xtraTabPage1");
+            this.tab_error.Name = "tab_error";
+            this.tab_error.PageVisible = false;
+            resources.ApplyResources(this.tab_error, "tab_error");
             // 
             // frm_Main
             // 
@@ -239,11 +239,11 @@
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarButtonItem btn_manageruser;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage tab_phanquyen;
+        private DevExpress.XtraTab.XtraTabPage tab_phancong;
         private DevExpress.XtraTab.XtraTabPage tab_checker1;
         private DevExpress.XtraTab.XtraTabPage tab_checker2;
         private DevExpress.XtraTab.XtraTabPage tab_admin;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage tab_error;
         private DevExpress.XtraBars.BarButtonItem btn_ManagerFiles;
     }
 }
