@@ -215,6 +215,25 @@
       <Column Name="Token" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_DataColumn36" Member="tbl_DataColumn36s">
+    <Type Name="tbl_DataColumn36">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataColumn36" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DataColumn38" Member="tbl_DataColumn38s">
+    <Type Name="tbl_DataColumn38">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataColumn37" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="dataColumn38" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DataColumn37" Member="tbl_DataColumn37s">
+    <Type Name="tbl_DataColumn37">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dataColumn37" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.CreateBatch" Method="CreateBatch">
     <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="UserCreate" Parameter="userCreate" Type="System.String" DbType="NVarChar(255)" />

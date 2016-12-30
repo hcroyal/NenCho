@@ -54,6 +54,15 @@ namespace Nencho
     partial void Inserttbl_User(tbl_User instance);
     partial void Updatetbl_User(tbl_User instance);
     partial void Deletetbl_User(tbl_User instance);
+    partial void Inserttbl_DataColumn36(tbl_DataColumn36 instance);
+    partial void Updatetbl_DataColumn36(tbl_DataColumn36 instance);
+    partial void Deletetbl_DataColumn36(tbl_DataColumn36 instance);
+    partial void Inserttbl_DataColumn38(tbl_DataColumn38 instance);
+    partial void Updatetbl_DataColumn38(tbl_DataColumn38 instance);
+    partial void Deletetbl_DataColumn38(tbl_DataColumn38 instance);
+    partial void Inserttbl_DataColumn37(tbl_DataColumn37 instance);
+    partial void Updatetbl_DataColumn37(tbl_DataColumn37 instance);
+    partial void Deletetbl_DataColumn37(tbl_DataColumn37 instance);
     #endregion
 		
 		public DataNenchoDataContext() : 
@@ -163,6 +172,30 @@ namespace Nencho
 			get
 			{
 				return this.GetTable<tbl_User>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_DataColumn36> tbl_DataColumn36s
+		{
+			get
+			{
+				return this.GetTable<tbl_DataColumn36>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_DataColumn38> tbl_DataColumn38s
+		{
+			get
+			{
+				return this.GetTable<tbl_DataColumn38>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_DataColumn37> tbl_DataColumn37s
+		{
+			get
+			{
+				return this.GetTable<tbl_DataColumn37>();
 			}
 		}
 		
@@ -4756,6 +4789,288 @@ namespace Nencho
 					this._Token = value;
 					this.SendPropertyChanged("Token");
 					this.OnTokenChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DataColumn36")]
+	public partial class tbl_DataColumn36 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _dataColumn36;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OndataColumn36Changing(string value);
+    partial void OndataColumn36Changed();
+    #endregion
+		
+		public tbl_DataColumn36()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataColumn36", DbType="NVarChar(500)")]
+		public string dataColumn36
+		{
+			get
+			{
+				return this._dataColumn36;
+			}
+			set
+			{
+				if ((this._dataColumn36 != value))
+				{
+					this.OndataColumn36Changing(value);
+					this.SendPropertyChanging();
+					this._dataColumn36 = value;
+					this.SendPropertyChanged("dataColumn36");
+					this.OndataColumn36Changed();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DataColumn38")]
+	public partial class tbl_DataColumn38 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _dataColumn37;
+		
+		private string _dataColumn38;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OndataColumn37Changing(string value);
+    partial void OndataColumn37Changed();
+    partial void OndataColumn38Changing(string value);
+    partial void OndataColumn38Changed();
+    #endregion
+		
+		public tbl_DataColumn38()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataColumn37", DbType="NVarChar(200)")]
+		public string dataColumn37
+		{
+			get
+			{
+				return this._dataColumn37;
+			}
+			set
+			{
+				if ((this._dataColumn37 != value))
+				{
+					this.OndataColumn37Changing(value);
+					this.SendPropertyChanging();
+					this._dataColumn37 = value;
+					this.SendPropertyChanged("dataColumn37");
+					this.OndataColumn37Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataColumn38", DbType="NVarChar(500)")]
+		public string dataColumn38
+		{
+			get
+			{
+				return this._dataColumn38;
+			}
+			set
+			{
+				if ((this._dataColumn38 != value))
+				{
+					this.OndataColumn38Changing(value);
+					this.SendPropertyChanging();
+					this._dataColumn38 = value;
+					this.SendPropertyChanged("dataColumn38");
+					this.OndataColumn38Changed();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DataColumn37")]
+	public partial class tbl_DataColumn37 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _dataColumn37;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OndataColumn37Changing(string value);
+    partial void OndataColumn37Changed();
+    #endregion
+		
+		public tbl_DataColumn37()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dataColumn37", DbType="NVarChar(200)")]
+		public string dataColumn37
+		{
+			get
+			{
+				return this._dataColumn37;
+			}
+			set
+			{
+				if ((this._dataColumn37 != value))
+				{
+					this.OndataColumn37Changing(value);
+					this.SendPropertyChanging();
+					this._dataColumn37 = value;
+					this.SendPropertyChanged("dataColumn37");
+					this.OndataColumn37Changed();
 				}
 			}
 		}
