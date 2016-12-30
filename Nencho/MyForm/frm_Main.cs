@@ -166,17 +166,19 @@ namespace Nencho.MyForm
                 MessageBox.Show("Lỗi : " + i);
             }
         }
-        
+
         #endregion
         private void Lookupedit_Column37_EditValueChanged(object sender, EventArgs e)
         {
-            var s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37").ToString() : "";
-            if (!string.IsNullOrEmpty(s))
+            LookUpEdit edit = sender as LookUpEdit;
+            var row = edit.Properties.GetDataSourceRowByKeyValue(edit.EditValue);
+            
+            //var s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37").ToString() : "";
+            if (!string.IsNullOrEmpty(row.ToString()))
             {
-                Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == s select w.dataColumn38;
+                Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == row.ToString() select w.dataColumn38;
             }
         }
-
         #region TabChecker1
 
         #endregion
