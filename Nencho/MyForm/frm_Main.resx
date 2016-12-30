@@ -602,6 +602,285 @@
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="gridControl_checker1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridControl_checker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridColumn25.Caption" xml:space="preserve">
+    <value>配偶者控除の対象となる人に、配偶者特別控除を適用している場合</value>
+  </data>
+  <data name="gridColumn25.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn25.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn25.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn26.Caption" xml:space="preserve">
+    <value>配偶者特別控除の対象となる人に、配偶者控除を適用している場合</value>
+  </data>
+  <data name="gridColumn26.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn26.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn26.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn27.Caption" xml:space="preserve">
+    <value>配偶者控除の可能性がある</value>
+  </data>
+  <data name="gridColumn27.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn27.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumn27.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn28.Caption" xml:space="preserve">
+    <value>配偶者特別控除の可能性がある</value>
+  </data>
+  <data name="gridColumn28.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn28.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumn28.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn29.Caption" xml:space="preserve">
+    <value>寡婦､特別の寡婦､寡夫の可能性がある</value>
+  </data>
+  <data name="gridColumn29.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn29.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gridColumn29.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn30.Caption" xml:space="preserve">
+    <value>勤労学生の対象</value>
+  </data>
+  <data name="gridColumn30.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn30.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gridColumn30.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn31.Caption" xml:space="preserve">
+    <value>障害者手帳のコピー添付</value>
+  </data>
+  <data name="gridColumn31.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn31.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gridColumn31.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn32.Caption" xml:space="preserve">
+    <value>扶養申告書未提出</value>
+  </data>
+  <data name="gridColumn32.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn32.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="gridColumn32.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn33.Caption" xml:space="preserve">
+    <value>保険申告書未提出</value>
+  </data>
+  <data name="gridColumn33.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn33.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="gridColumn33.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn34.Caption" xml:space="preserve">
+    <value>証明書添付誤り,未提出</value>
+  </data>
+  <data name="gridColumn34.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn34.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="gridColumn34.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn35.Caption" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="Lookupedit_column36.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.1" name="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="Lookupedit_column36.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumn35.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn35.VisibleIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gridColumn35.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="gridColumn36.Caption" xml:space="preserve">
+    <value>申告書種類</value>
+  </data>
+  <data name="Lookupedit_Column37.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Lookupedit_Column37.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumn36.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn36.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="gridColumn36.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="gridColumn37.Caption" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="Lookupedit_Column38.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Lookupedit_Column38.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumn37.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn37.VisibleIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="gridColumn37.Width" type="System.Int32, mscorlib">
+    <value>400</value>
+  </data>
+  <data name="gridColumn38.Caption" xml:space="preserve">
+    <value>実際作業日</value>
+  </data>
+  <data name="gridColumn38.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn38.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="gridColumn38.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="gridColumn39.Caption" xml:space="preserve">
+    <value>作業時間</value>
+  </data>
+  <data name="gridColumn39.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn39.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="gridColumn39.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn40.Caption" xml:space="preserve">
+    <value>内部
+問い合わせ
+（分）</value>
+  </data>
+  <data name="gridColumn40.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn40.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="gridColumn40.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn41.Caption" xml:space="preserve">
+    <value>差異ファイルを直す（分）</value>
+  </data>
+  <data name="gridColumn41.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn41.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="gridColumn41.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn42.Caption" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="gridColumn42.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn42.VisibleIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="gridColumn42.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="cbb_Column36.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbb_Column36.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="cbb_Column37.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbb_Column37.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="cbb_Column38.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cbb_Column38.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="gridControl_checker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 580</value>
+  </data>
+  <data name="gridControl_checker1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gridControl_checker1.Name" xml:space="preserve">
+    <value>gridControl_checker1</value>
+  </data>
+  <data name="&gt;&gt;gridControl_checker1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridControl_checker1.Parent" xml:space="preserve">
+    <value>tab_checker1</value>
+  </data>
+  <data name="&gt;&gt;gridControl_checker1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tab_checker1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1113, 580</value>
   </data>
@@ -895,6 +1174,156 @@
   </data>
   <data name="&gt;&gt;gridColumn24.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dgv_Checker1.Name" xml:space="preserve">
+    <value>dgv_Checker1</value>
+  </data>
+  <data name="&gt;&gt;dgv_Checker1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Name" xml:space="preserve">
+    <value>gridColumn25</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Name" xml:space="preserve">
+    <value>gridColumn26</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn27.Name" xml:space="preserve">
+    <value>gridColumn27</value>
+  </data>
+  <data name="&gt;&gt;gridColumn27.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn28.Name" xml:space="preserve">
+    <value>gridColumn28</value>
+  </data>
+  <data name="&gt;&gt;gridColumn28.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn29.Name" xml:space="preserve">
+    <value>gridColumn29</value>
+  </data>
+  <data name="&gt;&gt;gridColumn29.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn30.Name" xml:space="preserve">
+    <value>gridColumn30</value>
+  </data>
+  <data name="&gt;&gt;gridColumn30.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn31.Name" xml:space="preserve">
+    <value>gridColumn31</value>
+  </data>
+  <data name="&gt;&gt;gridColumn31.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn32.Name" xml:space="preserve">
+    <value>gridColumn32</value>
+  </data>
+  <data name="&gt;&gt;gridColumn32.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn33.Name" xml:space="preserve">
+    <value>gridColumn33</value>
+  </data>
+  <data name="&gt;&gt;gridColumn33.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn34.Name" xml:space="preserve">
+    <value>gridColumn34</value>
+  </data>
+  <data name="&gt;&gt;gridColumn34.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn35.Name" xml:space="preserve">
+    <value>gridColumn35</value>
+  </data>
+  <data name="&gt;&gt;gridColumn35.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_column36.Name" xml:space="preserve">
+    <value>Lookupedit_column36</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_column36.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn36.Name" xml:space="preserve">
+    <value>gridColumn36</value>
+  </data>
+  <data name="&gt;&gt;gridColumn36.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_Column37.Name" xml:space="preserve">
+    <value>Lookupedit_Column37</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_Column37.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn37.Name" xml:space="preserve">
+    <value>gridColumn37</value>
+  </data>
+  <data name="&gt;&gt;gridColumn37.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_Column38.Name" xml:space="preserve">
+    <value>Lookupedit_Column38</value>
+  </data>
+  <data name="&gt;&gt;Lookupedit_Column38.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn38.Name" xml:space="preserve">
+    <value>gridColumn38</value>
+  </data>
+  <data name="&gt;&gt;gridColumn38.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn39.Name" xml:space="preserve">
+    <value>gridColumn39</value>
+  </data>
+  <data name="&gt;&gt;gridColumn39.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn40.Name" xml:space="preserve">
+    <value>gridColumn40</value>
+  </data>
+  <data name="&gt;&gt;gridColumn40.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn41.Name" xml:space="preserve">
+    <value>gridColumn41</value>
+  </data>
+  <data name="&gt;&gt;gridColumn41.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn42.Name" xml:space="preserve">
+    <value>gridColumn42</value>
+  </data>
+  <data name="&gt;&gt;gridColumn42.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column36.Name" xml:space="preserve">
+    <value>cbb_Column36</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column36.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column37.Name" xml:space="preserve">
+    <value>cbb_Column37</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column37.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column38.Name" xml:space="preserve">
+    <value>cbb_Column38</value>
+  </data>
+  <data name="&gt;&gt;cbb_Column38.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_Main</value>

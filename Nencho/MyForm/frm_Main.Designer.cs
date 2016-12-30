@@ -72,6 +72,32 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tab_checker1 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_checker1 = new DevExpress.XtraGrid.GridControl();
+            this.dgv_Checker1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Lookupedit_column36 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Lookupedit_Column37 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Lookupedit_Column38 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbb_Column36 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.cbb_Column37 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.cbb_Column38 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.tab_checker2 = new DevExpress.XtraTab.XtraTabPage();
             this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
             this.tab_error = new DevExpress.XtraTab.XtraTabPage();
@@ -81,6 +107,15 @@
             this.tab_phancong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Division)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Division)).BeginInit();
+            this.tab_checker1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_checker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Checker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column38)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -467,26 +502,206 @@
             // 
             // tab_checker1
             // 
+            this.tab_checker1.Controls.Add(this.gridControl_checker1);
             this.tab_checker1.Name = "tab_checker1";
-            this.tab_checker1.PageVisible = false;
             resources.ApplyResources(this.tab_checker1, "tab_checker1");
+            // 
+            // gridControl_checker1
+            // 
+            resources.ApplyResources(this.gridControl_checker1, "gridControl_checker1");
+            this.gridControl_checker1.MainView = this.dgv_Checker1;
+            this.gridControl_checker1.MenuManager = this.barManager1;
+            this.gridControl_checker1.Name = "gridControl_checker1";
+            this.gridControl_checker1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.cbb_Column36,
+            this.cbb_Column37,
+            this.cbb_Column38,
+            this.Lookupedit_column36,
+            this.Lookupedit_Column37,
+            this.Lookupedit_Column38});
+            this.gridControl_checker1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_Checker1});
+            // 
+            // dgv_Checker1
+            // 
+            this.dgv_Checker1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgv_Checker1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgv_Checker1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.dgv_Checker1.Appearance.TopNewRow.Options.UseTextOptions = true;
+            this.dgv_Checker1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn25,
+            this.gridColumn26,
+            this.gridColumn27,
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40,
+            this.gridColumn41,
+            this.gridColumn42});
+            this.dgv_Checker1.GridControl = this.gridControl_checker1;
+            this.dgv_Checker1.Name = "dgv_Checker1";
+            this.dgv_Checker1.OptionsView.ColumnAutoWidth = false;
+            this.dgv_Checker1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.dgv_Checker1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.dgv_Checker1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn25
+            // 
+            resources.ApplyResources(this.gridColumn25, "gridColumn25");
+            this.gridColumn25.Name = "gridColumn25";
+            // 
+            // gridColumn26
+            // 
+            resources.ApplyResources(this.gridColumn26, "gridColumn26");
+            this.gridColumn26.Name = "gridColumn26";
+            // 
+            // gridColumn27
+            // 
+            resources.ApplyResources(this.gridColumn27, "gridColumn27");
+            this.gridColumn27.Name = "gridColumn27";
+            // 
+            // gridColumn28
+            // 
+            resources.ApplyResources(this.gridColumn28, "gridColumn28");
+            this.gridColumn28.Name = "gridColumn28";
+            // 
+            // gridColumn29
+            // 
+            resources.ApplyResources(this.gridColumn29, "gridColumn29");
+            this.gridColumn29.Name = "gridColumn29";
+            // 
+            // gridColumn30
+            // 
+            resources.ApplyResources(this.gridColumn30, "gridColumn30");
+            this.gridColumn30.Name = "gridColumn30";
+            // 
+            // gridColumn31
+            // 
+            resources.ApplyResources(this.gridColumn31, "gridColumn31");
+            this.gridColumn31.Name = "gridColumn31";
+            // 
+            // gridColumn32
+            // 
+            resources.ApplyResources(this.gridColumn32, "gridColumn32");
+            this.gridColumn32.Name = "gridColumn32";
+            // 
+            // gridColumn33
+            // 
+            resources.ApplyResources(this.gridColumn33, "gridColumn33");
+            this.gridColumn33.Name = "gridColumn33";
+            // 
+            // gridColumn34
+            // 
+            resources.ApplyResources(this.gridColumn34, "gridColumn34");
+            this.gridColumn34.Name = "gridColumn34";
+            // 
+            // gridColumn35
+            // 
+            resources.ApplyResources(this.gridColumn35, "gridColumn35");
+            this.gridColumn35.ColumnEdit = this.Lookupedit_column36;
+            this.gridColumn35.Name = "gridColumn35";
+            // 
+            // Lookupedit_column36
+            // 
+            resources.ApplyResources(this.Lookupedit_column36, "Lookupedit_column36");
+            this.Lookupedit_column36.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("Lookupedit_column36.Buttons"))))});
+            this.Lookupedit_column36.Name = "Lookupedit_column36";
+            // 
+            // gridColumn36
+            // 
+            resources.ApplyResources(this.gridColumn36, "gridColumn36");
+            this.gridColumn36.ColumnEdit = this.Lookupedit_Column37;
+            this.gridColumn36.Name = "gridColumn36";
+            // 
+            // Lookupedit_Column37
+            // 
+            resources.ApplyResources(this.Lookupedit_Column37, "Lookupedit_Column37");
+            this.Lookupedit_Column37.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("Lookupedit_Column37.Buttons"))))});
+            this.Lookupedit_Column37.Name = "Lookupedit_Column37";
+            // 
+            // gridColumn37
+            // 
+            resources.ApplyResources(this.gridColumn37, "gridColumn37");
+            this.gridColumn37.ColumnEdit = this.Lookupedit_Column38;
+            this.gridColumn37.Name = "gridColumn37";
+            // 
+            // Lookupedit_Column38
+            // 
+            resources.ApplyResources(this.Lookupedit_Column38, "Lookupedit_Column38");
+            this.Lookupedit_Column38.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("Lookupedit_Column38.Buttons"))))});
+            this.Lookupedit_Column38.Name = "Lookupedit_Column38";
+            // 
+            // gridColumn38
+            // 
+            resources.ApplyResources(this.gridColumn38, "gridColumn38");
+            this.gridColumn38.Name = "gridColumn38";
+            // 
+            // gridColumn39
+            // 
+            resources.ApplyResources(this.gridColumn39, "gridColumn39");
+            this.gridColumn39.Name = "gridColumn39";
+            // 
+            // gridColumn40
+            // 
+            resources.ApplyResources(this.gridColumn40, "gridColumn40");
+            this.gridColumn40.Name = "gridColumn40";
+            // 
+            // gridColumn41
+            // 
+            resources.ApplyResources(this.gridColumn41, "gridColumn41");
+            this.gridColumn41.Name = "gridColumn41";
+            // 
+            // gridColumn42
+            // 
+            resources.ApplyResources(this.gridColumn42, "gridColumn42");
+            this.gridColumn42.Name = "gridColumn42";
+            // 
+            // cbb_Column36
+            // 
+            resources.ApplyResources(this.cbb_Column36, "cbb_Column36");
+            this.cbb_Column36.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cbb_Column36.Buttons"))))});
+            this.cbb_Column36.Name = "cbb_Column36";
+            // 
+            // cbb_Column37
+            // 
+            resources.ApplyResources(this.cbb_Column37, "cbb_Column37");
+            this.cbb_Column37.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cbb_Column37.Buttons"))))});
+            this.cbb_Column37.Name = "cbb_Column37";
+            // 
+            // cbb_Column38
+            // 
+            resources.ApplyResources(this.cbb_Column38, "cbb_Column38");
+            this.cbb_Column38.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cbb_Column38.Buttons"))))});
+            this.cbb_Column38.Name = "cbb_Column38";
             // 
             // tab_checker2
             // 
             this.tab_checker2.Name = "tab_checker2";
-            this.tab_checker2.PageVisible = false;
             resources.ApplyResources(this.tab_checker2, "tab_checker2");
             // 
             // tab_admin
             // 
             this.tab_admin.Name = "tab_admin";
-            this.tab_admin.PageVisible = false;
             resources.ApplyResources(this.tab_admin, "tab_admin");
             // 
             // tab_error
             // 
             this.tab_error.Name = "tab_error";
-            this.tab_error.PageVisible = false;
             resources.ApplyResources(this.tab_error, "tab_error");
             // 
             // frm_Main
@@ -507,6 +722,15 @@
             this.tab_phancong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Division)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Division)).EndInit();
+            this.tab_checker1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_checker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Checker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_Column38)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,5 +783,31 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.GridControl gridControl_checker1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_Checker1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbb_Column36;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbb_Column37;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbb_Column38;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit Lookupedit_column36;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit Lookupedit_Column37;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit Lookupedit_Column38;
     }
 }
