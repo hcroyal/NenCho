@@ -568,6 +568,7 @@
             this.dgv_de.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.dgv_de.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.dgv_de.OptionsView.ShowGroupPanel = false;
+            this.dgv_de.ShownEditor += new System.EventHandler(this.dgv_de_ShownEditor);
             // 
             // gridColumn25
             // 
@@ -671,6 +672,7 @@
             this.Lookupedit_Column38.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("Lookupedit_Column38.Buttons"))))});
             this.Lookupedit_Column38.Name = "Lookupedit_Column38";
+            this.Lookupedit_Column38.EditValueChanged += new System.EventHandler(this.Lookupedit_Column38_EditValueChanged);
             // 
             // gridColumn38
             // 

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 
 namespace Nencho.MyForm
@@ -98,15 +101,16 @@ namespace Nencho.MyForm
                 //Load gridControl DE
                 Lookupedit_column36.DataSource = from w in Global.DataNencho.tbl_DataColumn36s select w.dataColumn36;
                 Lookupedit_Column37.DataSource = from w in Global.DataNencho.tbl_DataColumn37s select w.dataColumn37;
-                string s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "gridColumn36") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "gridColumn36").ToString() : "";
-                if (!string.IsNullOrEmpty(s))
-                {
-                    Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == s select w.dataColumn38;
-                }
-                else
-                {
-                    Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s select w.dataColumn38;
-                }
+                Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s select w.dataColumn38;
+                //string s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "gridColumn36") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "gridColumn36").ToString() : "";
+                //if (!string.IsNullOrEmpty(s))
+                //{
+                //    Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == s select w.dataColumn38;
+                //}
+                //else
+                //{
+                //    Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s select w.dataColumn38;
+                //}
 
                 //---Load Tab Checker
 
@@ -170,35 +174,65 @@ namespace Nencho.MyForm
         #endregion
         private void Lookupedit_Column37_EditValueChanged(object sender, EventArgs e)
         {
-            LookUpEdit edit = sender as LookUpEdit;
-            var row = edit.Properties.GetDataSourceRowByKeyValue(edit.EditValue);
-            
-            //var s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37").ToString() : "";
-            if (!string.IsNullOrEmpty(row.ToString()))
-            {
-                Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == row.ToString() select w.dataColumn38;
-            }
+            //    LookUpEdit edit = sender as LookUpEdit;
+            //    DataRow sourceDataRow = (edit.Properties.GetDataSourceRowByKeyValue(edit.EditValue) as DataRowView).Row;
+            //    DataRow targetDataRow = dgv_de.GetDataRow(dgv_de.FocusedRowHandle);
+
+            //    var row = edit.EditValue;
+
+
+            //    //var s = dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37") != null ? dgv_de.GetRowCellValue(dgv_Division.FocusedRowHandle, "Truong_37").ToString() : "";
+            //    if (!string.IsNullOrEmpty(row.ToString()))
+            //    {
+            //        Lookupedit_Column37.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == row.ToString() select w.dataColumn38;
+            //    }
+
         }
+
+        private void changeDataSourceLookupEdit(DataRow sourceDataRow, DataRow tagetDataRow)
+        {
+            
+        }
+
         #region TabChecker1
 
         #endregion
 
         #region TabChecker2
 
-        
+
 
         #endregion
 
         #region TabAdmin
 
-        
+
 
         #endregion
 
         #region TabError
 
-        
+
 
         #endregion
+        private DataView clone = null;
+        private void dgv_de_ShownEditor(object sender, EventArgs e)
+        {
+            ColumnView view = (ColumnView)sender;
+            if (view.FocusedColumn.FieldName == "Truong_38")
+            {
+                LookUpEdit editor = (LookUpEdit)view.ActiveEditor;
+                string countryCode = Convert.ToString(view.GetFocusedRowCellValue("Truong_37"));
+                editor.Properties.DataSource = from w in Global.DataNencho.tbl_DataColumn38s where w.dataColumn37 == countryCode select w.dataColumn38;
+            }
+        }
+
+        private void Lookupedit_Column38_EditValueChanged(object sender, EventArgs e)
+        {
+            dgv_de.PostEditor();
+            //dgv_de.SetFocusedRowCellValue("Truong_38", null);
+        }
+
+        
     }
 }
