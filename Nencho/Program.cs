@@ -26,7 +26,7 @@ namespace Nencho
                 a.lb_version.Text = @"1.0";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2016\PHIẾU KIỂM ĐỊNH\Tool";
                 a.LoginEvent += a_LoginEvent;
-                a.ButtonLoginEven+=a_ButtonLoginEven;
+                a.ButtonLoginEven += a_ButtonLoginEven;
                 if (a.ShowDialog() == DialogResult.OK)
                 {
                     Global.StrMachine = a.StrMachine;
@@ -67,37 +67,37 @@ namespace Nencho
                 if (iKiemtraLogin==1 && role == "DE ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE(username);
-                    cbb.DisplayMember = "Cot_Z"; 
+                    cbb.DisplayMember = "fBatchName"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "CHECKER ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker(username);
-                    cbb.DisplayMember = "Cot_Z"; 
+                    cbb.DisplayMember = "fBatchName"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "ADMIN")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchAdmin(username);
-                    cbb.DisplayMember = "Cot_Z"; 
+                    cbb.DisplayMember = "fBatchName"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "DE CHECKER")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Cheker(username);
-                    cbb.DisplayMember = "Cot_Z";
+                    cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role == "DE ADMIN")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Admin(username);
-                    cbb.DisplayMember = "Cot_Z";
+                    cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role == "CHECKER ADMIN")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker_Admin(username);
-                    cbb.DisplayMember = "Cot_Z";
+                    cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role == "DE CHECKER ADMIN")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDe_Checker_Admin(username);
-                    cbb.DisplayMember = "Cot_Z";
+                    cbb.DisplayMember = "fBatchName";
                 }
             }
             catch (Exception e)
