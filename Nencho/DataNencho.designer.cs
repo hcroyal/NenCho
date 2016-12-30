@@ -314,11 +314,25 @@ namespace Nencho
 			return ((ISingleResult<GetBatchDE_ChekerResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDivision")]
+		public ISingleResult<GetDivisionResult> GetDivision()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetDivisionResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
 		public ISingleResult<GetListUserResult> GetListUser()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeUser")]
+		public ISingleResult<GetRoLeUserResult> GetRoLeUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime")]
@@ -347,20 +361,6 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, toKen);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeUser")]
-		public ISingleResult<GetRoLeUserResult> GetRoLeUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDivision")]
-		public ISingleResult<GetDivisionResult> GetDivision()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetDivisionResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -5099,24 +5099,24 @@ namespace Nencho
 	public partial class GetBatchAdminResult
 	{
 		
-		private string _Cot_Z;
+		private string _fBatchName;
 		
 		public GetBatchAdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fBatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fBatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fBatchName = value;
 				}
 			}
 		}
@@ -5125,24 +5125,24 @@ namespace Nencho
 	public partial class GetBatchCheckerResult
 	{
 		
-		private string _Cot_Z;
+		private string _fBatchName;
 		
 		public GetBatchCheckerResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fBatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fBatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fBatchName = value;
 				}
 			}
 		}
@@ -5151,24 +5151,24 @@ namespace Nencho
 	public partial class GetBatchChecker_AdminResult
 	{
 		
-		private string _Cot_Z;
+		private string _fBatchName;
 		
 		public GetBatchChecker_AdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fBatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fBatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fBatchName = value;
 				}
 			}
 		}
@@ -5177,24 +5177,24 @@ namespace Nencho
 	public partial class GetBatchDEResult
 	{
 		
-		private string _Cot_Z;
+		private string _fBatchName;
 		
 		public GetBatchDEResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fBatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fBatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fBatchName = value;
 				}
 			}
 		}
@@ -5203,24 +5203,24 @@ namespace Nencho
 	public partial class GetBatchDE_AdminResult
 	{
 		
-		private string _Cot_Z;
+		private string _fBatchName;
 		
 		public GetBatchDE_AdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fBatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fBatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fBatchName = value;
 				}
 			}
 		}
@@ -5229,24 +5229,24 @@ namespace Nencho
 	public partial class GetBatchDe_Checker_AdminResult
 	{
 		
-		private string _Cot_Z;
+		private string _fbatchName;
 		
 		public GetBatchDe_Checker_AdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fbatchName", DbType="NVarChar(255)")]
+		public string fbatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fbatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fbatchName != value))
 				{
-					this._Cot_Z = value;
+					this._fbatchName = value;
 				}
 			}
 		}
@@ -5255,130 +5255,24 @@ namespace Nencho
 	public partial class GetBatchDE_ChekerResult
 	{
 		
-		private string _Cot_Z;
+		private string _fbatchName;
 		
 		public GetBatchDE_ChekerResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fbatchName", DbType="NVarChar(255)")]
+		public string fbatchName
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._fbatchName;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._fbatchName != value))
 				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetListUserResult
-	{
-		
-		private string _UserName;
-		
-		private string _Password;
-		
-		private string _IdRole;
-		
-		private string _Nhanvien;
-		
-		public GetListUserResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this._Password = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
-		public string IdRole
-		{
-			get
-			{
-				return this._IdRole;
-			}
-			set
-			{
-				if ((this._IdRole != value))
-				{
-					this._IdRole = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
-		public string Nhanvien
-		{
-			get
-			{
-				return this._Nhanvien;
-			}
-			set
-			{
-				if ((this._Nhanvien != value))
-				{
-					this._Nhanvien = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetRoLeUserResult
-	{
-		
-		private string _Column1;
-		
-		public GetRoLeUserResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(250)")]
-		public string Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
+					this._fbatchName = value;
 				}
 			}
 		}
@@ -5819,6 +5713,112 @@ namespace Nencho
 				if ((this._Cot_AF != value))
 				{
 					this._Cot_AF = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetListUserResult
+	{
+		
+		private string _UserName;
+		
+		private string _Password;
+		
+		private string _IdRole;
+		
+		private string _Nhanvien;
+		
+		public GetListUserResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
+		public string IdRole
+		{
+			get
+			{
+				return this._IdRole;
+			}
+			set
+			{
+				if ((this._IdRole != value))
+				{
+					this._IdRole = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
+		public string Nhanvien
+		{
+			get
+			{
+				return this._Nhanvien;
+			}
+			set
+			{
+				if ((this._Nhanvien != value))
+				{
+					this._Nhanvien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetRoLeUserResult
+	{
+		
+		private string _Column1;
+		
+		public GetRoLeUserResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(250)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
 				}
 			}
 		}
