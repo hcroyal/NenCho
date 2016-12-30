@@ -602,11 +602,83 @@
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="gridControl_checker1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 10</value>
   </data>
-  <data name="gridControl_checker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>Batch NO:</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>tab_de</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lb_fbatchname_de.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="lb_fbatchname_de.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 9</value>
+  </data>
+  <data name="lb_fbatchname_de.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 16</value>
+  </data>
+  <data name="lb_fbatchname_de.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lb_fbatchname_de.Text" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;lb_fbatchname_de.Name" xml:space="preserve">
+    <value>lb_fbatchname_de</value>
+  </data>
+  <data name="&gt;&gt;lb_fbatchname_de.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lb_fbatchname_de.Parent" xml:space="preserve">
+    <value>tab_de</value>
+  </data>
+  <data name="&gt;&gt;lb_fbatchname_de.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbb_batchnode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 6</value>
+  </data>
+  <data name="cbb_batchnode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="cbb_batchnode.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbb_batchnode.Name" xml:space="preserve">
+    <value>cbb_batchnode</value>
+  </data>
+  <data name="&gt;&gt;cbb_batchnode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbb_batchnode.Parent" xml:space="preserve">
+    <value>tab_de</value>
+  </data>
+  <data name="&gt;&gt;cbb_batchnode.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gridControl_de.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="gridControl_de.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 33</value>
   </data>
   <data name="gridColumn25.Caption" xml:space="preserve">
     <value>配偶者控除の対象となる人に、配偶者特別控除を適用している場合</value>
@@ -845,76 +917,58 @@
   <data name="gridColumn42.Width" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="cbb_Column36.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="gridControl_de.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 552</value>
   </data>
-  <data name="cbb_Column36.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
-    <value>Combo</value>
-  </data>
-  <data name="cbb_Column37.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cbb_Column37.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
-    <value>Combo</value>
-  </data>
-  <data name="cbb_Column38.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="cbb_Column38.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
-    <value>Combo</value>
-  </data>
-  <data name="gridControl_checker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1113, 580</value>
-  </data>
-  <data name="gridControl_checker1.TabIndex" type="System.Int32, mscorlib">
+  <data name="gridControl_de.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;gridControl_checker1.Name" xml:space="preserve">
-    <value>gridControl_checker1</value>
+  <data name="&gt;&gt;gridControl_de.Name" xml:space="preserve">
+    <value>gridControl_de</value>
   </data>
-  <data name="&gt;&gt;gridControl_checker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;gridControl_de.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gridControl_checker1.Parent" xml:space="preserve">
-    <value>tab_checker1</value>
+  <data name="&gt;&gt;gridControl_de.Parent" xml:space="preserve">
+    <value>tab_de</value>
   </data>
-  <data name="&gt;&gt;gridControl_checker1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;gridControl_de.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="tab_checker1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tab_de.Size" type="System.Drawing.Size, System.Drawing">
     <value>1113, 580</value>
   </data>
-  <data name="tab_checker1.Text" xml:space="preserve">
-    <value>Checker 1</value>
+  <data name="tab_de.Text" xml:space="preserve">
+    <value>DE</value>
   </data>
-  <data name="&gt;&gt;tab_checker1.Name" xml:space="preserve">
-    <value>tab_checker1</value>
+  <data name="&gt;&gt;tab_de.Name" xml:space="preserve">
+    <value>tab_de</value>
   </data>
-  <data name="&gt;&gt;tab_checker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tab_de.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;tab_checker1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tab_de.Parent" xml:space="preserve">
     <value>xtraTabControl1</value>
   </data>
-  <data name="&gt;&gt;tab_checker1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tab_de.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tab_checker2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tab_checker.Size" type="System.Drawing.Size, System.Drawing">
     <value>1113, 580</value>
   </data>
-  <data name="tab_checker2.Text" xml:space="preserve">
-    <value>Checker 2</value>
+  <data name="tab_checker.Text" xml:space="preserve">
+    <value>Checker</value>
   </data>
-  <data name="&gt;&gt;tab_checker2.Name" xml:space="preserve">
-    <value>tab_checker2</value>
+  <data name="&gt;&gt;tab_checker.Name" xml:space="preserve">
+    <value>tab_checker</value>
   </data>
-  <data name="&gt;&gt;tab_checker2.Type" xml:space="preserve">
+  <data name="&gt;&gt;tab_checker.Type" xml:space="preserve">
     <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;tab_checker2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tab_checker.Parent" xml:space="preserve">
     <value>xtraTabControl1</value>
   </data>
-  <data name="&gt;&gt;tab_checker2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tab_checker.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tab_admin.Size" type="System.Drawing.Size, System.Drawing">
@@ -1175,10 +1229,10 @@
   <data name="&gt;&gt;gridColumn24.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dgv_Checker1.Name" xml:space="preserve">
-    <value>dgv_Checker1</value>
+  <data name="&gt;&gt;dgv_de.Name" xml:space="preserve">
+    <value>dgv_de</value>
   </data>
-  <data name="&gt;&gt;dgv_Checker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgv_de.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn25.Name" xml:space="preserve">
@@ -1306,24 +1360,6 @@
   </data>
   <data name="&gt;&gt;gridColumn42.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column36.Name" xml:space="preserve">
-    <value>cbb_Column36</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column36.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column37.Name" xml:space="preserve">
-    <value>cbb_Column37</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column37.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column38.Name" xml:space="preserve">
-    <value>cbb_Column38</value>
-  </data>
-  <data name="&gt;&gt;cbb_Column38.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_Main</value>
