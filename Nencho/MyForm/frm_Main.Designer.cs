@@ -657,7 +657,6 @@
             this.Lookupedit_Column37.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("Lookupedit_Column37.Buttons"))))});
             this.Lookupedit_Column37.Name = "Lookupedit_Column37";
-            this.Lookupedit_Column37.EditValueChanged += new System.EventHandler(this.Lookupedit_Column37_EditValueChanged);
             // 
             // gridColumn37
             // 
