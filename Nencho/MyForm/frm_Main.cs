@@ -92,7 +92,6 @@ namespace Nencho.MyForm
                 gridControl_Division.DataSource = Global.DataNencho.GetDivision();
 
                 //---Load Tab DE
-
                 //Load label BatchName and Combobox BatchNO
                 lb_fbatchname_de.Text = Global.StrBatch;
                 if (!string.IsNullOrEmpty((Global.StrBatch)))
@@ -101,7 +100,7 @@ namespace Nencho.MyForm
                 }
 
                 //---Load gridControl DE
-                gridControl_de.DataSource = Global.DataNencho.tbl_Inputs;
+                gridControl_de.DataSource = Global.DataNencho.GetDataDE(lb_fbatchname_de.Text,cbb_batchnode.Text);
                 Lookupedit_column36.DataSource = from w in Global.DataNencho.tbl_DataColumn36s select w.dataColumn36;
                 Lookupedit_Column37.DataSource = from w in Global.DataNencho.tbl_DataColumn37s select w.dataColumn37;
                 Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s select w.dataColumn38;
@@ -183,6 +182,8 @@ namespace Nencho.MyForm
         private void Lookupedit_Column38_EditValueChanged(object sender, EventArgs e)
         {
             dgv_de.PostEditor();
+            var valueTruong38 = dgv_de.GetRowCellValue(dgv_de.FocusedRowHandle, "Truong_38") != null ? dgv_de.GetRowCellValue(dgv_de.FocusedRowHandle, "Truong_38").ToString() : "";
+            dgv_de.SetRowCellValue(dgv_de.FocusedRowHandle, "Truong_43", !string.IsNullOrEmpty(valueTruong38) ? "○" : "");
         }
 
         #endregion

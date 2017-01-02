@@ -680,6 +680,30 @@
   <data name="gridControl_de.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 33</value>
   </data>
+  <data name="gridColumn43.Caption" xml:space="preserve">
+    <value>ﾔﾏ番号</value>
+  </data>
+  <data name="gridColumn43.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn43.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn43.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="gridColumn44.Caption" xml:space="preserve">
+    <value>ﾌｧｲﾙ名</value>
+  </data>
+  <data name="gridColumn44.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn44.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn44.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
   <data name="gridColumn25.Caption" xml:space="preserve">
     <value>配偶者控除の対象となる人に、配偶者特別控除を適用している場合</value>
   </data>
@@ -687,7 +711,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn25.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="gridColumn25.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -699,7 +723,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn26.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="gridColumn26.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -711,7 +735,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn27.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="gridColumn27.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -723,7 +747,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn28.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="gridColumn28.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -735,7 +759,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn29.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="gridColumn29.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -747,7 +771,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn30.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="gridColumn30.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -759,7 +783,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn31.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="gridColumn31.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -771,7 +795,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn32.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="gridColumn32.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -783,7 +807,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn33.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="gridColumn33.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -795,7 +819,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn34.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="gridColumn34.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -810,11 +834,14 @@
   <data name="Lookupedit_column36.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
   </data>
+  <data name="Lookupedit_column36.NullText" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridColumn35.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn35.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="gridColumn35.Width" type="System.Int32, mscorlib">
     <value>300</value>
@@ -828,11 +855,14 @@
   <data name="Lookupedit_Column37.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
   </data>
+  <data name="Lookupedit_Column37.NullText" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridColumn36.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn36.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="gridColumn36.Width" type="System.Int32, mscorlib">
     <value>80</value>
@@ -846,11 +876,14 @@
   <data name="Lookupedit_Column38.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
     <value>Combo</value>
   </data>
+  <data name="Lookupedit_Column38.NullText" xml:space="preserve">
+    <value />
+  </data>
   <data name="gridColumn37.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn37.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="gridColumn37.Width" type="System.Int32, mscorlib">
     <value>400</value>
@@ -862,7 +895,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn38.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="gridColumn38.Width" type="System.Int32, mscorlib">
     <value>70</value>
@@ -874,7 +907,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn39.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="gridColumn39.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -888,7 +921,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn40.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="gridColumn40.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -900,7 +933,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn41.VisibleIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="gridColumn41.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -912,7 +945,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn42.VisibleIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="gridColumn42.Width" type="System.Int32, mscorlib">
     <value>60</value>
@@ -1234,6 +1267,18 @@
   </data>
   <data name="&gt;&gt;dgv_de.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn43.Name" xml:space="preserve">
+    <value>gridColumn43</value>
+  </data>
+  <data name="&gt;&gt;gridColumn43.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn44.Name" xml:space="preserve">
+    <value>gridColumn44</value>
+  </data>
+  <data name="&gt;&gt;gridColumn44.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn25.Name" xml:space="preserve">
     <value>gridColumn25</value>
