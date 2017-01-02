@@ -188,6 +188,12 @@ namespace Nencho.MyForm
 
         #endregion
 
+        private void TextEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            var valueText = dgv_de.GetRowCellValue(dgv_de.FocusedRowHandle, "Truong_26") != null ? dgv_de.GetRowCellValue(dgv_de.FocusedRowHandle, "Truong_26").ToString() : "";
+
+        }
+
         #region Tab_Checker
 
 
