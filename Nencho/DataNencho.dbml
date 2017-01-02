@@ -331,6 +331,32 @@
       <Column Name="fbatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetDataDE" Method="GetDataDE">
+    <Parameter Name="fBatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataDEResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GetDivision" Method="GetDivision">
     <ElementType Name="GetDivisionResult">
       <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />

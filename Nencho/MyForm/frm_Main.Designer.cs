@@ -96,6 +96,7 @@
             this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Lookupedit_Column38 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -115,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -535,7 +537,8 @@
             this.gridControl_de.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.Lookupedit_column36,
             this.Lookupedit_Column37,
-            this.Lookupedit_Column38});
+            this.Lookupedit_Column38,
+            this.repositoryItemTextEdit1});
             this.gridControl_de.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgv_de});
             // 
@@ -742,8 +745,16 @@
             this.gridColumn38.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn38.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             resources.ApplyResources(this.gridColumn38, "gridColumn38");
+            this.gridColumn38.ColumnEdit = this.repositoryItemTextEdit1;
             this.gridColumn38.FieldName = "Truong_39";
             this.gridColumn38.Name = "gridColumn38";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemTextEdit1, "repositoryItemTextEdit1");
+            this.repositoryItemTextEdit1.Mask.EditMask = resources.GetString("repositoryItemTextEdit1.Mask.EditMask");
+            this.repositoryItemTextEdit1.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemTextEdit1.Mask.MaskType")));
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // gridColumn39
             // 
@@ -822,6 +833,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -902,5 +914,6 @@
         private System.Windows.Forms.ComboBox cbb_batchnode;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
     }
 }
