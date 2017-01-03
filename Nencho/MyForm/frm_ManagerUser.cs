@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -81,60 +82,78 @@ namespace Nencho.MyForm
         {
             try
             {
-                string pass = GetMd5Hash(txt_password.Text);
-
-                if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
+                var token = (from w in Global.DataNencho.GetToken(Global.StrUsername) select w.Token).FirstOrDefault();
+                if (token == Global.Strtoken)
                 {
-                    int r = Global.DataNencho.InsertUser(txt_username.Text, pass, null, txt_nhanvien.Text);
-                    if (r == 0)
+                    string pass = GetMd5Hash(txt_password.Text);
+
+                    if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
                     {
-                        MessageBox.Show("UserName đã tồn tại, Vui lòng nhập UserName khác !");
+                        int r = Global.DataNencho.InsertUser(txt_username.Text, pass, null, txt_nhanvien.Text);
+                        if (r == 0)
+                        {
+                            MessageBox.Show("UserName đã tồn tại, Vui lòng nhập UserName khác !");
+                        }
+                        if (r == 1)
+                        {
+                            MessageBox.Show("Đã thêm UserName '" + txt_username.Text + "' !");
+                            frm_ManagerUser_Load(sender, e);
+                            txt_username.Text = "";
+                            txt_nhanvien.Text = "";
+                            txt_password.Text = "";
+                            txt_username.Focus();
+                        }
                     }
-                    if (r == 1)
+                    else
                     {
-                        MessageBox.Show("Đã thêm UserName '" + txt_username.Text + "' !");
-                        frm_ManagerUser_Load(sender, e);
-                        txt_username.Text = "";
-                        txt_nhanvien.Text = "";
-                        txt_password.Text = "";
-                        txt_username.Focus();
+                        MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
+                    MessageBox.Show("User của bạn đang được đăng nhập trên PC khác, vui lòng đăng nhập lại và thực hiện lại giao dich!");
                 }
             }
             catch (Exception i)
             {
                 MessageBox.Show("Lỗi: " + i);
-            }
-        }
+            }}
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             try
             {
-                string pass = GetMd5Hash(txt_password.Text);
-
-                if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
+                var token = (from w in Global.DataNencho.GetToken(Global.StrUsername) select w.Token).FirstOrDefault();
+                if (token == Global.Strtoken)
                 {
-                    DialogResult thongbao = MessageBox.Show("Bạn chắc chắn muốn sửa thông tin UserName '" + txt_username.Text + "'", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (thongbao == DialogResult.Yes)
+                    string pass = GetMd5Hash(txt_password.Text);
+
+                    if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) &&
+                        !string.IsNullOrEmpty(pass))
                     {
-                        Global.DataNencho.UpdateUser(txt_username.Text, pass, null, txt_nhanvien.Text);
-                        frm_ManagerUser_Load(sender, e);
+                        DialogResult thongbao =
+                            MessageBox.Show("Bạn chắc chắn muốn sửa thông tin UserName '" + txt_username.Text + "'",
+                                "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (thongbao == DialogResult.Yes)
+                        {
+                            Global.DataNencho.UpdateUser(txt_username.Text, pass, null, txt_nhanvien.Text);
+                            frm_ManagerUser_Load(sender, e);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
+                    MessageBox.Show(
+                        "User của bạn đang được đăng nhập trên PC khác, vui lòng đăng nhập lại và thực hiện lại giao dich!");
                 }
             }
             catch (Exception i)
             {
                 MessageBox.Show("Lỗi: " + i);
             }
-        }
-    }
+        }}
 }

@@ -72,11 +72,13 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tab_de = new DevExpress.XtraTab.XtraTabPage();
+            this.btn_submit_de = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lb_fbatchname_de = new DevExpress.XtraEditors.LabelControl();
             this.cbb_batchnode = new System.Windows.Forms.ComboBox();
             this.gridControl_de = new DevExpress.XtraGrid.GridControl();
             this.dgv_de = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,7 +98,7 @@
             this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Lookupedit_Column38 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.TextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -116,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -291,7 +293,6 @@
             this.dgv_Division.Name = "dgv_Division";
             this.dgv_Division.OptionsView.ColumnAutoWidth = false;
             this.dgv_Division.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.dgv_Division.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.dgv_Division.OptionsView.ShowGroupPanel = false;
             this.dgv_Division.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_Division_CustomDrawRowIndicator);
             this.dgv_Division.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.dgv_Division_RowCellStyle);
@@ -503,12 +504,19 @@
             // 
             // tab_de
             // 
+            this.tab_de.Controls.Add(this.btn_submit_de);
             this.tab_de.Controls.Add(this.labelControl2);
             this.tab_de.Controls.Add(this.lb_fbatchname_de);
             this.tab_de.Controls.Add(this.cbb_batchnode);
             this.tab_de.Controls.Add(this.gridControl_de);
             this.tab_de.Name = "tab_de";
             resources.ApplyResources(this.tab_de, "tab_de");
+            // 
+            // btn_submit_de
+            // 
+            resources.ApplyResources(this.btn_submit_de, "btn_submit_de");
+            this.btn_submit_de.Name = "btn_submit_de";
+            this.btn_submit_de.Click += new System.EventHandler(this.btn_submit_de_Click);
             // 
             // labelControl2
             // 
@@ -527,6 +535,7 @@
             this.cbb_batchnode.FormattingEnabled = true;
             resources.ApplyResources(this.cbb_batchnode, "cbb_batchnode");
             this.cbb_batchnode.Name = "cbb_batchnode";
+            this.cbb_batchnode.TextChanged += new System.EventHandler(this.cbb_batchnode_TextChanged);
             // 
             // gridControl_de
             // 
@@ -538,7 +547,7 @@
             this.Lookupedit_column36,
             this.Lookupedit_Column37,
             this.Lookupedit_Column38,
-            this.repositoryItemTextEdit1});
+            this.TextEdit2});
             this.gridControl_de.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgv_de});
             // 
@@ -549,6 +558,7 @@
             this.dgv_de.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dgv_de.Appearance.TopNewRow.Options.UseTextOptions = true;
             this.dgv_de.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn45,
             this.gridColumn43,
             this.gridColumn44,
             this.gridColumn25,
@@ -573,9 +583,23 @@
             this.dgv_de.Name = "dgv_de";
             this.dgv_de.OptionsView.ColumnAutoWidth = false;
             this.dgv_de.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.dgv_de.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.dgv_de.OptionsView.ShowGroupPanel = false;
+            this.dgv_de.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_de_CustomDrawRowIndicator);
             this.dgv_de.ShownEditor += new System.EventHandler(this.dgv_de_ShownEditor);
+            this.dgv_de.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.dgv_de_CellValueChanged);
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn45.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn45.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn45.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn45.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn45.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn45, "gridColumn45");
+            this.gridColumn45.FieldName = "IDFile";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn43
             // 
@@ -745,16 +769,16 @@
             this.gridColumn38.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn38.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             resources.ApplyResources(this.gridColumn38, "gridColumn38");
-            this.gridColumn38.ColumnEdit = this.repositoryItemTextEdit1;
+            this.gridColumn38.ColumnEdit = this.TextEdit2;
             this.gridColumn38.FieldName = "Truong_39";
             this.gridColumn38.Name = "gridColumn38";
             // 
-            // repositoryItemTextEdit1
+            // TextEdit2
             // 
-            resources.ApplyResources(this.repositoryItemTextEdit1, "repositoryItemTextEdit1");
-            this.repositoryItemTextEdit1.Mask.EditMask = resources.GetString("repositoryItemTextEdit1.Mask.EditMask");
-            this.repositoryItemTextEdit1.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("repositoryItemTextEdit1.Mask.MaskType")));
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            resources.ApplyResources(this.TextEdit2, "TextEdit2");
+            this.TextEdit2.Mask.EditMask = resources.GetString("TextEdit2.Mask.EditMask");
+            this.TextEdit2.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("TextEdit2.Mask.MaskType")));
+            this.TextEdit2.Name = "TextEdit2";
             // 
             // gridColumn39
             // 
@@ -833,7 +857,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -914,6 +938,8 @@
         private System.Windows.Forms.ComboBox cbb_batchnode;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TextEdit2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraEditors.SimpleButton btn_submit_de;
     }
 }

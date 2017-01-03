@@ -64,37 +64,37 @@ namespace Nencho
                 iKiemtraLogin = Global.DataNencho.KiemTraLogin(username, password);
                 strVersion = (from w in Global.DataNencho.tbl_Versions where w.IdProject == "Nencho" select w.Version).FirstOrDefault();
                 role=(from w in Global.DataNencho.GetRoLeUser(username) select w.Column1).FirstOrDefault();
-                if (iKiemtraLogin==1 && role == "DE ")
+                if (iKiemtraLogin==1 && role == "Checker1 ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE(username);
                     cbb.DisplayMember = "fBatchName"; 
                 }
-                else if (iKiemtraLogin == 1 && role == "CHECKER ")
+                else if (iKiemtraLogin == 1 && role == "Checker2 ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker(username);
                     cbb.DisplayMember = "fBatchName"; 
                 }
-                else if (iKiemtraLogin == 1 && role == "ADMIN")
+                else if (iKiemtraLogin == 1 && role == "Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchAdmin(username);
                     cbb.DisplayMember = "fBatchName"; 
                 }
-                else if (iKiemtraLogin == 1 && role == "DE CHECKER")
+                else if (iKiemtraLogin == 1 && role == "Checker1 Checker2")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Cheker(username);
                     cbb.DisplayMember = "fBatchName";
                 }
-                else if (iKiemtraLogin == 1 && role == "DE ADMIN")
+                else if (iKiemtraLogin == 1 && role == "Checker1 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Admin(username);
                     cbb.DisplayMember = "fBatchName";
                 }
-                else if (iKiemtraLogin == 1 && role == "CHECKER ADMIN")
+                else if (iKiemtraLogin == 1 && role == "Checker2 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker_Admin(username);
                     cbb.DisplayMember = "fBatchName";
                 }
-                else if (iKiemtraLogin == 1 && role == "DE CHECKER ADMIN")
+                else if (iKiemtraLogin == 1 && role == "Checker1 Checker2 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDe_Checker_Admin(username);
                     cbb.DisplayMember = "fBatchName";
