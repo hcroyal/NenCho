@@ -100,7 +100,7 @@ namespace Nencho.MyForm
                 }
 
                 //---Load gridControl DE
-                gridControl_de.DataSource = Global.DataNencho.GetDataDE(lb_fbatchname_de.Text,cbb_batchnode.Text);
+                gridControl_de.DataSource = Global.DataNencho.GetDataDE(lb_fbatchname_de.Text,cbb_batchnode.Text,Global.StrUsername);
                 Lookupedit_column36.DataSource = from w in Global.DataNencho.tbl_DataColumn36s select w.dataColumn36;
                 Lookupedit_Column37.DataSource = from w in Global.DataNencho.tbl_DataColumn37s select w.dataColumn37;
                 Lookupedit_Column38.DataSource = from w in Global.DataNencho.tbl_DataColumn38s select w.dataColumn38;

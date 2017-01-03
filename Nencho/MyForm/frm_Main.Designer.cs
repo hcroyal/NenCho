@@ -80,6 +80,7 @@
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,15 +97,15 @@
             this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Lookupedit_Column38 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.TextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.tab_checker = new DevExpress.XtraTab.XtraTabPage();
             this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
             this.tab_error = new DevExpress.XtraTab.XtraTabPage();
-            this.TextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -114,12 +115,13 @@
             this.tab_de.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_de)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_de)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit1.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -294,7 +296,6 @@
             this.dgv_Division.Name = "dgv_Division";
             this.dgv_Division.OptionsView.ColumnAutoWidth = false;
             this.dgv_Division.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.dgv_Division.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.dgv_Division.OptionsView.ShowGroupPanel = false;
             this.dgv_Division.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_Division_CustomDrawRowIndicator);
             this.dgv_Division.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.dgv_Division_RowCellStyle);
@@ -542,7 +543,8 @@
             this.Lookupedit_Column37,
             this.Lookupedit_Column38,
             this.DateEdit1,
-            this.TextEdit1});
+            this.TextEdit1,
+            this.TextEdit2});
             this.gridControl_de.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgv_de});
             // 
@@ -577,7 +579,6 @@
             this.dgv_de.Name = "dgv_de";
             this.dgv_de.OptionsView.ColumnAutoWidth = false;
             this.dgv_de.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.dgv_de.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.dgv_de.OptionsView.ShowGroupPanel = false;
             this.dgv_de.ShownEditor += new System.EventHandler(this.dgv_de_ShownEditor);
             // 
@@ -613,6 +614,12 @@
             this.gridColumn25.ColumnEdit = this.TextEdit1;
             this.gridColumn25.FieldName = "Truong_26";
             this.gridColumn25.Name = "gridColumn25";
+            // 
+            // TextEdit1
+            // 
+            resources.ApplyResources(this.TextEdit1, "TextEdit1");
+            this.TextEdit1.Name = "TextEdit1";
+            this.TextEdit1.EditValueChanged += new System.EventHandler(this.TextEdit1_EditValueChanged);
             // 
             // gridColumn26
             // 
@@ -751,26 +758,16 @@
             this.gridColumn38.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn38.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             resources.ApplyResources(this.gridColumn38, "gridColumn38");
-            this.gridColumn38.ColumnEdit = this.DateEdit1;
+            this.gridColumn38.ColumnEdit = this.TextEdit2;
             this.gridColumn38.FieldName = "Truong_39";
             this.gridColumn38.Name = "gridColumn38";
             // 
-            // DateEdit1
+            // TextEdit2
             // 
-            resources.ApplyResources(this.DateEdit1, "DateEdit1");
-            this.DateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateEdit1.Buttons"))))});
-            this.DateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateEdit1.CalendarTimeProperties.Buttons"))))});
-            this.DateEdit1.CalendarTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("DateEdit1.CalendarTimeProperties.Mask.MaskType")));
-            this.DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat")));
-            this.DateEdit1.DisplayFormat.FormatString = "yyyy/MM/dd";
-            this.DateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DateEdit1.EditFormat.FormatString = "yyyy/MM/dd";
-            this.DateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DateEdit1.Mask.EditMask = resources.GetString("DateEdit1.Mask.EditMask");
-            this.DateEdit1.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DateEdit1.Mask.UseMaskAsDisplayFormat")));
-            this.DateEdit1.Name = "DateEdit1";
+            resources.ApplyResources(this.TextEdit2, "TextEdit2");
+            this.TextEdit2.Mask.EditMask = resources.GetString("TextEdit2.Mask.EditMask");
+            this.TextEdit2.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("TextEdit2.Mask.MaskType")));
+            this.TextEdit2.Name = "TextEdit2";
             // 
             // gridColumn39
             // 
@@ -809,6 +806,23 @@
             this.gridColumn42.Name = "gridColumn42";
             this.gridColumn42.OptionsColumn.ReadOnly = true;
             // 
+            // DateEdit1
+            // 
+            resources.ApplyResources(this.DateEdit1, "DateEdit1");
+            this.DateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateEdit1.Buttons"))))});
+            this.DateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateEdit1.CalendarTimeProperties.Buttons"))))});
+            this.DateEdit1.CalendarTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("DateEdit1.CalendarTimeProperties.Mask.MaskType")));
+            this.DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat")));
+            this.DateEdit1.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.DateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.DateEdit1.EditFormat.FormatString = "yyyy/MM/dd";
+            this.DateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.DateEdit1.Mask.EditMask = resources.GetString("DateEdit1.Mask.EditMask");
+            this.DateEdit1.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DateEdit1.Mask.UseMaskAsDisplayFormat")));
+            this.DateEdit1.Name = "DateEdit1";
+            // 
             // tab_checker
             // 
             this.tab_checker.Name = "tab_checker";
@@ -823,12 +837,6 @@
             // 
             this.tab_error.Name = "tab_error";
             resources.ApplyResources(this.tab_error, "tab_error");
-            // 
-            // TextEdit1
-            // 
-            resources.ApplyResources(this.TextEdit1, "TextEdit1");
-            this.TextEdit1.Name = "TextEdit1";
-            this.TextEdit1.EditValueChanged += new System.EventHandler(this.TextEdit1_EditValueChanged);
             // 
             // frm_Main
             // 
@@ -852,12 +860,13 @@
             this.tab_de.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_de)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_de)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_column36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -940,5 +949,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit DateEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TextEdit2;
     }
 }

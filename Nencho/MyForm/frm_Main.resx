@@ -894,27 +894,15 @@
   <data name="gridColumn38.Caption" xml:space="preserve">
     <value>実際作業日</value>
   </data>
-  <data name="DateEdit1.AutoHeight" type="System.Boolean, mscorlib">
+  <data name="TextEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="DateEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
-    <value>Combo</value>
-  </data>
-  <data name="DateEdit1.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
-    <value>Combo</value>
+  <data name="TextEdit2.Mask.EditMask" xml:space="preserve">
+    <value>[0-9][0-7][0-9][0-9]/[0-1][0-9]/[0-3][0-9]</value>
   </data>
   <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="DateEdit1.CalendarTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
-    <value>Simple</value>
-  </data>
-  <data name="DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DateEdit1.Mask.EditMask" xml:space="preserve">
-    <value>yyyy/MM/dd</value>
-  </data>
-  <data name="DateEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TextEdit2.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>RegEx</value>
   </data>
   <data name="gridColumn38.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -974,6 +962,27 @@
   </data>
   <data name="gridColumn42.Width" type="System.Int32, mscorlib">
     <value>60</value>
+  </data>
+  <data name="DateEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DateEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="DateEdit1.CalendarTimeProperties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Combo</value>
+  </data>
+  <data name="DateEdit1.CalendarTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>Simple</value>
+  </data>
+  <data name="DateEdit1.CalendarTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DateEdit1.Mask.EditMask" xml:space="preserve">
+    <value>yyyy/MM/dd</value>
+  </data>
+  <data name="DateEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="gridControl_de.Size" type="System.Drawing.Size, System.Drawing">
     <value>1113, 552</value>
@@ -1311,6 +1320,12 @@
   <data name="&gt;&gt;gridColumn25.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;TextEdit1.Name" xml:space="preserve">
+    <value>TextEdit1</value>
+  </data>
+  <data name="&gt;&gt;TextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridColumn26.Name" xml:space="preserve">
     <value>gridColumn26</value>
   </data>
@@ -1407,11 +1422,11 @@
   <data name="&gt;&gt;gridColumn38.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;DateEdit1.Name" xml:space="preserve">
-    <value>DateEdit1</value>
+  <data name="&gt;&gt;TextEdit2.Name" xml:space="preserve">
+    <value>TextEdit2</value>
   </data>
-  <data name="&gt;&gt;DateEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;TextEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn39.Name" xml:space="preserve">
     <value>gridColumn39</value>
@@ -1437,11 +1452,11 @@
   <data name="&gt;&gt;gridColumn42.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;TextEdit1.Name" xml:space="preserve">
-    <value>TextEdit1</value>
+  <data name="&gt;&gt;DateEdit1.Name" xml:space="preserve">
+    <value>DateEdit1</value>
   </data>
-  <data name="&gt;&gt;TextEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;DateEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemDateEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_Main</value>
