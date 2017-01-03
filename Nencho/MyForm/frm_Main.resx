@@ -683,11 +683,15 @@
   <data name="gridColumn43.Caption" xml:space="preserve">
     <value>ﾔﾏ番号</value>
   </data>
+  <assembly alias="DevExpress.XtraGrid.v16.1" name="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="gridColumn43.Fixed" type="DevExpress.XtraGrid.Columns.FixedStyle, DevExpress.XtraGrid.v16.1">
+    <value>Left</value>
+  </data>
   <data name="gridColumn43.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn43.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="gridColumn43.Width" type="System.Int32, mscorlib">
     <value>55</value>
@@ -695,11 +699,14 @@
   <data name="gridColumn44.Caption" xml:space="preserve">
     <value>ﾌｧｲﾙ名</value>
   </data>
+  <data name="gridColumn44.Fixed" type="DevExpress.XtraGrid.Columns.FixedStyle, DevExpress.XtraGrid.v16.1">
+    <value>Left</value>
+  </data>
   <data name="gridColumn44.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn44.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="gridColumn44.Width" type="System.Int32, mscorlib">
     <value>200</value>

@@ -24,8 +24,7 @@ namespace Nencho.MyForm
 
             labelControl6.Visible = false;
             cbb_ChonSheet.Visible = false;
-            txt_UserName.Text = Global.StrUsername;
-            txt_NgayTao.Text = DateTime.Now.ToShortDateString();
+            txt_UserName.Text = Global.StrUsername;txt_NgayTao.Text = DateTime.Now.ToShortDateString();
         }
 
         private void cbb_ChonSheet_EditValueChanged(object sender, EventArgs e)
@@ -110,6 +109,7 @@ namespace Nencho.MyForm
                         if (n>7 && n<dt.Rows.Count)
                         {
                             Global.DataNencho.CreateFile(txt_fBatchName.Text,
+                                                    dataRow[1].ToString(),
                                                     dataRow[2].ToString(),
                                                     dataRow[3].ToString(),
                                                     dataRow[4].ToString(),
@@ -127,7 +127,7 @@ namespace Nencho.MyForm
                                                     dataRow[16].ToString(),
                                                     dataRow[17].ToString(),
                                                     dataRow[18].ToString(),
-                                                    dataRow[19].ToString(),
+                                                    dataRow[29].ToString(),
                                                     dataRow[20].ToString(),
                                                     dataRow[21].ToString(),
                                                     dataRow[22].ToString(),
@@ -138,8 +138,7 @@ namespace Nencho.MyForm
                                                     dataRow[27].ToString(),
                                                     dataRow[28].ToString(),
                                                     dataRow[29].ToString(),
-                                                    dataRow[30].ToString(),
-                                                    dataRow[31].ToString());
+                                                    dataRow[30].ToString());
                         }
                         n++;
                     }
