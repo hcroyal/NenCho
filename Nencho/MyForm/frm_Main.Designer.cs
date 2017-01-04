@@ -72,14 +72,14 @@
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tab_de = new DevExpress.XtraTab.XtraTabPage();
+            this.cbb_batchnode_complete = new System.Windows.Forms.ComboBox();
             this.btn_submit_de = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_fbatchname_de = new DevExpress.XtraEditors.LabelControl();
             this.cbb_batchnode = new System.Windows.Forms.ComboBox();
             this.gridControl_de = new DevExpress.XtraGrid.GridControl();
             this.dgv_de = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,6 +104,37 @@
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tab_checker = new DevExpress.XtraTab.XtraTabPage();
+            this.cbb_batchnochecker_complete = new System.Windows.Forms.ComboBox();
+            this.btn_submit_checker = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.cbb_batchnochecker = new System.Windows.Forms.ComboBox();
+            this.gridControl_checker = new DevExpress.XtraGrid.GridControl();
+            this.dgv_checker = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Column57 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Column58 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LookUpEdit_Column59 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
             this.tab_error = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -119,6 +150,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).BeginInit();
+            this.tab_checker.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_checker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_checker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit3)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -504,13 +542,21 @@
             // 
             // tab_de
             // 
+            this.tab_de.Controls.Add(this.cbb_batchnode_complete);
             this.tab_de.Controls.Add(this.btn_submit_de);
+            this.tab_de.Controls.Add(this.labelControl1);
             this.tab_de.Controls.Add(this.labelControl2);
-            this.tab_de.Controls.Add(this.lb_fbatchname_de);
             this.tab_de.Controls.Add(this.cbb_batchnode);
             this.tab_de.Controls.Add(this.gridControl_de);
             this.tab_de.Name = "tab_de";
             resources.ApplyResources(this.tab_de, "tab_de");
+            // 
+            // cbb_batchnode_complete
+            // 
+            this.cbb_batchnode_complete.FormattingEnabled = true;
+            resources.ApplyResources(this.cbb_batchnode_complete, "cbb_batchnode_complete");
+            this.cbb_batchnode_complete.Name = "cbb_batchnode_complete";
+            this.cbb_batchnode_complete.SelectedIndexChanged += new System.EventHandler(this.cbb_batchnode_complete_SelectedIndexChanged);
             // 
             // btn_submit_de
             // 
@@ -518,24 +564,22 @@
             this.btn_submit_de.Name = "btn_submit_de";
             this.btn_submit_de.Click += new System.EventHandler(this.btn_submit_de_Click);
             // 
+            // labelControl1
+            // 
+            resources.ApplyResources(this.labelControl1, "labelControl1");
+            this.labelControl1.Name = "labelControl1";
+            // 
             // labelControl2
             // 
             resources.ApplyResources(this.labelControl2, "labelControl2");
             this.labelControl2.Name = "labelControl2";
-            // 
-            // lb_fbatchname_de
-            // 
-            this.lb_fbatchname_de.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("lb_fbatchname_de.Appearance.Font")));
-            this.lb_fbatchname_de.Appearance.Options.UseFont = true;
-            resources.ApplyResources(this.lb_fbatchname_de, "lb_fbatchname_de");
-            this.lb_fbatchname_de.Name = "lb_fbatchname_de";
             // 
             // cbb_batchnode
             // 
             this.cbb_batchnode.FormattingEnabled = true;
             resources.ApplyResources(this.cbb_batchnode, "cbb_batchnode");
             this.cbb_batchnode.Name = "cbb_batchnode";
-            this.cbb_batchnode.TextChanged += new System.EventHandler(this.cbb_batchnode_TextChanged);
+            this.cbb_batchnode.SelectedIndexChanged += new System.EventHandler(this.cbb_batchnode_SelectedIndexChanged);
             // 
             // gridControl_de
             // 
@@ -559,7 +603,6 @@
             this.dgv_de.Appearance.TopNewRow.Options.UseTextOptions = true;
             this.dgv_de.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn45,
-            this.gridColumn43,
             this.gridColumn44,
             this.gridColumn25,
             this.gridColumn26,
@@ -600,19 +643,6 @@
             this.gridColumn45.FieldName = "IDFile";
             this.gridColumn45.Name = "gridColumn45";
             this.gridColumn45.OptionsColumn.ReadOnly = true;
-            // 
-            // gridColumn43
-            // 
-            this.gridColumn43.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn43.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn43.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn43.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn43.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn43.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            resources.ApplyResources(this.gridColumn43, "gridColumn43");
-            this.gridColumn43.FieldName = "Cot_Z";
-            this.gridColumn43.Name = "gridColumn43";
-            this.gridColumn43.OptionsColumn.ReadOnly = true;
             // 
             // gridColumn44
             // 
@@ -819,8 +849,310 @@
             // 
             // tab_checker
             // 
+            this.tab_checker.Controls.Add(this.cbb_batchnochecker_complete);
+            this.tab_checker.Controls.Add(this.btn_submit_checker);
+            this.tab_checker.Controls.Add(this.labelControl3);
+            this.tab_checker.Controls.Add(this.labelControl4);
+            this.tab_checker.Controls.Add(this.cbb_batchnochecker);
+            this.tab_checker.Controls.Add(this.gridControl_checker);
             this.tab_checker.Name = "tab_checker";
             resources.ApplyResources(this.tab_checker, "tab_checker");
+            // 
+            // cbb_batchnochecker_complete
+            // 
+            this.cbb_batchnochecker_complete.FormattingEnabled = true;
+            resources.ApplyResources(this.cbb_batchnochecker_complete, "cbb_batchnochecker_complete");
+            this.cbb_batchnochecker_complete.Name = "cbb_batchnochecker_complete";
+            this.cbb_batchnochecker_complete.SelectedIndexChanged += new System.EventHandler(this.cbb_batchnochecker_complete_SelectedIndexChanged);
+            // 
+            // btn_submit_checker
+            // 
+            resources.ApplyResources(this.btn_submit_checker, "btn_submit_checker");
+            this.btn_submit_checker.Name = "btn_submit_checker";
+            this.btn_submit_checker.Click += new System.EventHandler(this.btn_submit_checker_Click);
+            // 
+            // labelControl3
+            // 
+            resources.ApplyResources(this.labelControl3, "labelControl3");
+            this.labelControl3.Name = "labelControl3";
+            // 
+            // labelControl4
+            // 
+            resources.ApplyResources(this.labelControl4, "labelControl4");
+            this.labelControl4.Name = "labelControl4";
+            // 
+            // cbb_batchnochecker
+            // 
+            this.cbb_batchnochecker.FormattingEnabled = true;
+            resources.ApplyResources(this.cbb_batchnochecker, "cbb_batchnochecker");
+            this.cbb_batchnochecker.Name = "cbb_batchnochecker";
+            this.cbb_batchnochecker.SelectedIndexChanged += new System.EventHandler(this.cbb_batchnochecker_SelectedIndexChanged);
+            // 
+            // gridControl_checker
+            // 
+            resources.ApplyResources(this.gridControl_checker, "gridControl_checker");
+            this.gridControl_checker.MainView = this.dgv_checker;
+            this.gridControl_checker.MenuManager = this.barManager1;
+            this.gridControl_checker.Name = "gridControl_checker";
+            this.gridControl_checker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.LookUpEdit_Column57,
+            this.LookUpEdit_Column58,
+            this.LookUpEdit_Column59,
+            this.TextEdit3});
+            this.gridControl_checker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_checker});
+            // 
+            // dgv_checker
+            // 
+            this.dgv_checker.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.dgv_checker.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dgv_checker.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.dgv_checker.Appearance.TopNewRow.Options.UseTextOptions = true;
+            this.dgv_checker.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn43,
+            this.gridColumn46,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55,
+            this.gridColumn56,
+            this.gridColumn57,
+            this.gridColumn58,
+            this.gridColumn59,
+            this.gridColumn60,
+            this.gridColumn61,
+            this.gridColumn62,
+            this.gridColumn63,
+            this.gridColumn64});
+            this.dgv_checker.GridControl = this.gridControl_checker;
+            this.dgv_checker.Name = "dgv_checker";
+            this.dgv_checker.OptionsView.ColumnAutoWidth = false;
+            this.dgv_checker.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.dgv_checker.OptionsView.ShowGroupPanel = false;
+            this.dgv_checker.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_checker_CustomDrawRowIndicator);
+            this.dgv_checker.ShownEditor += new System.EventHandler(this.dgv_checker_ShownEditor);
+            this.dgv_checker.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.dgv_checker_CellValueChanged);
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn43.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn43.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn43.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn43.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn43.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn43, "gridColumn43");
+            this.gridColumn43.FieldName = "IDFile";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.OptionsColumn.ReadOnly = true;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn46.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn46.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn46, "gridColumn46");
+            this.gridColumn46.FieldName = "Cot_G";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.OptionsColumn.ReadOnly = true;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn47.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn47.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn47, "gridColumn47");
+            this.gridColumn47.FieldName = "Truong_26";
+            this.gridColumn47.Name = "gridColumn47";
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn48.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn48.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn48, "gridColumn48");
+            this.gridColumn48.FieldName = "Truong_27";
+            this.gridColumn48.Name = "gridColumn48";
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn49.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn49.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn49, "gridColumn49");
+            this.gridColumn49.FieldName = "Truong_28";
+            this.gridColumn49.Name = "gridColumn49";
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn50.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn50.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn50, "gridColumn50");
+            this.gridColumn50.FieldName = "Truong_29";
+            this.gridColumn50.Name = "gridColumn50";
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn51.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn51.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn51, "gridColumn51");
+            this.gridColumn51.FieldName = "Truong_30";
+            this.gridColumn51.Name = "gridColumn51";
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn52.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn52.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn52, "gridColumn52");
+            this.gridColumn52.FieldName = "Truong_31";
+            this.gridColumn52.Name = "gridColumn52";
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn53.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn53.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn53, "gridColumn53");
+            this.gridColumn53.FieldName = "Truong_32";
+            this.gridColumn53.Name = "gridColumn53";
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn54.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn54.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn54, "gridColumn54");
+            this.gridColumn54.FieldName = "Truong_33";
+            this.gridColumn54.Name = "gridColumn54";
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn55.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn55.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn55, "gridColumn55");
+            this.gridColumn55.FieldName = "Truong_34";
+            this.gridColumn55.Name = "gridColumn55";
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn56.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn56.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn56, "gridColumn56");
+            this.gridColumn56.FieldName = "Truong_35";
+            this.gridColumn56.Name = "gridColumn56";
+            // 
+            // gridColumn57
+            // 
+            resources.ApplyResources(this.gridColumn57, "gridColumn57");
+            this.gridColumn57.ColumnEdit = this.LookUpEdit_Column57;
+            this.gridColumn57.FieldName = "Truong_36";
+            this.gridColumn57.Name = "gridColumn57";
+            // 
+            // LookUpEdit_Column57
+            // 
+            resources.ApplyResources(this.LookUpEdit_Column57, "LookUpEdit_Column57");
+            this.LookUpEdit_Column57.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUpEdit_Column57.Buttons"))))});
+            this.LookUpEdit_Column57.Name = "LookUpEdit_Column57";
+            this.LookUpEdit_Column57.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.LookUpEdit_Column57.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            // 
+            // gridColumn58
+            // 
+            resources.ApplyResources(this.gridColumn58, "gridColumn58");
+            this.gridColumn58.ColumnEdit = this.LookUpEdit_Column58;
+            this.gridColumn58.FieldName = "Truong_37";
+            this.gridColumn58.Name = "gridColumn58";
+            // 
+            // LookUpEdit_Column58
+            // 
+            resources.ApplyResources(this.LookUpEdit_Column58, "LookUpEdit_Column58");
+            this.LookUpEdit_Column58.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUpEdit_Column58.Buttons"))))});
+            this.LookUpEdit_Column58.Name = "LookUpEdit_Column58";
+            this.LookUpEdit_Column58.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.LookUpEdit_Column58.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            // 
+            // gridColumn59
+            // 
+            resources.ApplyResources(this.gridColumn59, "gridColumn59");
+            this.gridColumn59.ColumnEdit = this.LookUpEdit_Column59;
+            this.gridColumn59.FieldName = "Truong_38";
+            this.gridColumn59.Name = "gridColumn59";
+            // 
+            // LookUpEdit_Column59
+            // 
+            resources.ApplyResources(this.LookUpEdit_Column59, "LookUpEdit_Column59");
+            this.LookUpEdit_Column59.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUpEdit_Column59.Buttons"))))});
+            this.LookUpEdit_Column59.Name = "LookUpEdit_Column59";
+            this.LookUpEdit_Column59.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.LookUpEdit_Column59.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.LookUpEdit_Column59.EditValueChanged += new System.EventHandler(this.LookUpEdit_Column59_EditValueChanged);
+            // 
+            // gridColumn60
+            // 
+            this.gridColumn60.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn60.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn60.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn60, "gridColumn60");
+            this.gridColumn60.ColumnEdit = this.TextEdit3;
+            this.gridColumn60.FieldName = "Truong_39";
+            this.gridColumn60.Name = "gridColumn60";
+            // 
+            // TextEdit3
+            // 
+            resources.ApplyResources(this.TextEdit3, "TextEdit3");
+            this.TextEdit3.Mask.EditMask = resources.GetString("TextEdit3.Mask.EditMask");
+            this.TextEdit3.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("TextEdit3.Mask.MaskType")));
+            this.TextEdit3.Name = "TextEdit3";
+            // 
+            // gridColumn61
+            // 
+            this.gridColumn61.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn61.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn61.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn61, "gridColumn61");
+            this.gridColumn61.FieldName = "Truong_40";
+            this.gridColumn61.Name = "gridColumn61";
+            // 
+            // gridColumn62
+            // 
+            this.gridColumn62.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn62.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn62.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn62, "gridColumn62");
+            this.gridColumn62.FieldName = "Truong_41";
+            this.gridColumn62.Name = "gridColumn62";
+            // 
+            // gridColumn63
+            // 
+            this.gridColumn63.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn63.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn63.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn63, "gridColumn63");
+            this.gridColumn63.FieldName = "Truong_42";
+            this.gridColumn63.Name = "gridColumn63";
+            // 
+            // gridColumn64
+            // 
+            this.gridColumn64.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn64.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn64.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            resources.ApplyResources(this.gridColumn64, "gridColumn64");
+            this.gridColumn64.FieldName = "Truong_43";
+            this.gridColumn64.Name = "gridColumn64";
+            this.gridColumn64.OptionsColumn.ReadOnly = true;
             // 
             // tab_admin
             // 
@@ -841,6 +1173,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "frm_Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
@@ -858,6 +1191,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Lookupedit_Column38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEdit2)).EndInit();
+            this.tab_checker.ResumeLayout(false);
+            this.tab_checker.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_checker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_checker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_Column59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TextEdit3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -934,12 +1275,43 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit Lookupedit_Column37;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit Lookupedit_Column38;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl lb_fbatchname_de;
         private System.Windows.Forms.ComboBox cbb_batchnode;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TextEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
         private DevExpress.XtraEditors.SimpleButton btn_submit_de;
+        private System.Windows.Forms.ComboBox cbb_batchnode_complete;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ComboBox cbb_batchnochecker_complete;
+        private DevExpress.XtraEditors.SimpleButton btn_submit_checker;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.ComboBox cbb_batchnochecker;
+        private DevExpress.XtraGrid.GridControl gridControl_checker;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_checker;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Column57;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn58;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Column58;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn59;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit LookUpEdit_Column59;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TextEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn63;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn64;
     }
 }
