@@ -67,37 +67,37 @@ namespace Nencho
                 if (iKiemtraLogin==1 && role == "Checker1 ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE(username);
-                    cbb.DisplayMember = "fBatchName"; 
+                    cbb.DisplayMember = "Cot_Z"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "Checker2 ")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker(username);
-                    cbb.DisplayMember = "fBatchName"; 
+                    cbb.DisplayMember = "Cot_Z"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchAdmin(username);
-                    cbb.DisplayMember = "fBatchName"; 
+                    cbb.DisplayMember = "Cot_Z"; 
                 }
                 else if (iKiemtraLogin == 1 && role == "Checker1 Checker2")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Cheker(username);
-                    cbb.DisplayMember = "fBatchName";
+                    cbb.DisplayMember = "Cot_Z";
                 }
                 else if (iKiemtraLogin == 1 && role == "Checker1 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDE_Admin(username);
-                    cbb.DisplayMember = "fBatchName";
+                    cbb.DisplayMember = "Cot_Z";
                 }
                 else if (iKiemtraLogin == 1 && role == "Checker2 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchChecker_Admin(username);
-                    cbb.DisplayMember = "fBatchName";
+                    cbb.DisplayMember = "Cot_Z";
                 }
                 else if (iKiemtraLogin == 1 && role == "Checker1 Checker2 Admin")
                 {
                     cbb.DataSource = Global.DataNencho.GetBatchDe_Checker_Admin(username);
-                    cbb.DisplayMember = "fBatchName";
+                    cbb.DisplayMember = "Cot_Z";
                 }
             }
             catch (Exception e)
