@@ -314,11 +314,32 @@ namespace Nencho
 			return ((ISingleResult<GetBatchDE_ChekerResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDE")]
-		public ISingleResult<GetDataDEResult> GetDataDE([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataChecker")]
+		public ISingleResult<GetDataCheckerResult> GetDataChecker([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchname, batchNo, username);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataCheckerResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataCheckerComplete")]
+		public ISingleResult<GetDataCheckerCompleteResult> GetDataCheckerComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataCheckerCompleteResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDE")]
+		public ISingleResult<GetDataDEResult> GetDataDE([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
 			return ((ISingleResult<GetDataDEResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDEComplete")]
+		public ISingleResult<GetDataDECompleteResult> GetDataDEComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataDECompleteResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDivision")]
@@ -326,6 +347,20 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<GetDivisionResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
+		public ISingleResult<GetListUserResult> GetListUser()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeUser")]
+		public ISingleResult<GetRoLeUserResult> GetRoLeUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetToken")]
@@ -356,11 +391,10 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateDe")]
-		public int UpdateDe(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idfile, 
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableChecker")]
+		public int Update_TableChecker(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(255)")] string username, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_26", DbType="NVarChar(255)")] string truong_26, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_27", DbType="NVarChar(255)")] string truong_27, 
@@ -379,11 +413,44 @@ namespace Nencho
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_40", DbType="NVarChar(255)")] string truong_40, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_41", DbType="NVarChar(255)")] string truong_41, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_42", DbType="NVarChar(255)")] string truong_42, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_43", DbType="NVarChar(255)")] string truong_43, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_58", DbType="NVarChar(255)")] string truong_58, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_59", DbType="NVarChar(255)")] string truong_59)
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_43", DbType="NVarChar(255)")] string truong_43)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idfile, cot_G, fbatchname, cot_Z, truong_26, truong_27, truong_28, truong_29, truong_30, truong_31, truong_32, truong_33, truong_34, truong_35, truong_36, truong_37, truong_38, truong_39, truong_40, truong_41, truong_42, truong_43, truong_58, truong_59);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, cot_G, cot_Z, truong_26, truong_27, truong_28, truong_29, truong_30, truong_31, truong_32, truong_33, truong_34, truong_35, truong_36, truong_37, truong_38, truong_39, truong_40, truong_41, truong_42, truong_43);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableFile_Checker1")]
+		public int Update_TableFile_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string cot_g, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string batchno)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_g, batchno);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableInput")]
+		public int Update_TableInput(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(255)")] string username, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_26", DbType="NVarChar(255)")] string truong_26, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_27", DbType="NVarChar(255)")] string truong_27, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_28", DbType="NVarChar(255)")] string truong_28, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_29", DbType="NVarChar(255)")] string truong_29, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_30", DbType="NVarChar(255)")] string truong_30, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_31", DbType="NVarChar(255)")] string truong_31, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_32", DbType="NVarChar(255)")] string truong_32, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_33", DbType="NVarChar(255)")] string truong_33, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_34", DbType="NVarChar(255)")] string truong_34, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_35", DbType="NVarChar(255)")] string truong_35, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_36", DbType="NVarChar(255)")] string truong_36, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_37", DbType="NVarChar(255)")] string truong_37, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_38", DbType="NVarChar(255)")] string truong_38, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_39", DbType="NVarChar(255)")] string truong_39, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_40", DbType="NVarChar(255)")] string truong_40, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_41", DbType="NVarChar(255)")] string truong_41, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_42", DbType="NVarChar(255)")] string truong_42, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_43", DbType="NVarChar(255)")] string truong_43)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, cot_G, cot_Z, truong_26, truong_27, truong_28, truong_29, truong_30, truong_31, truong_32, truong_33, truong_34, truong_35, truong_36, truong_37, truong_38, truong_39, truong_40, truong_41, truong_42, truong_43);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -394,25 +461,34 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SubmitDe")]
-		public int SubmitDe([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string batchno)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertTableChecker")]
+		public int InsertTableChecker(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_26", DbType="NVarChar(255)")] string truong_26, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_27", DbType="NVarChar(255)")] string truong_27, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_28", DbType="NVarChar(255)")] string truong_28, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_29", DbType="NVarChar(255)")] string truong_29, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_30", DbType="NVarChar(255)")] string truong_30, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_31", DbType="NVarChar(255)")] string truong_31, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_32", DbType="NVarChar(255)")] string truong_32, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_33", DbType="NVarChar(255)")] string truong_33, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_34", DbType="NVarChar(255)")] string truong_34, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_35", DbType="NVarChar(255)")] string truong_35, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_36", DbType="NVarChar(255)")] string truong_36, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_37", DbType="NVarChar(255)")] string truong_37, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_38", DbType="NVarChar(255)")] string truong_38, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_43", DbType="NVarChar(255)")] string truong_43)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, batchno);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z, truong_26, truong_27, truong_28, truong_29, truong_30, truong_31, truong_32, truong_33, truong_34, truong_35, truong_36, truong_37, truong_38, truong_43);
 			return ((int)(result.ReturnValue));
-	}
-	
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLeUser")]
-		public ISingleResult<GetRoLeUserResult> GetRoLeUser([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(250)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
-			return ((ISingleResult<GetRoLeUserResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
-		public ISingleResult<GetListUserResult> GetListUser()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableFile_Checker2")]
+		public int Update_TableFile_Checker2([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string cot_g, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string batchno)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_g, batchno);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -5343,55 +5419,55 @@ namespace Nencho
 	public partial class GetBatchAdminResult
 	{
 		
-		private string _fBatchName;
+		private string _Cot_Z;
 		
 		public GetBatchAdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._Cot_Z != value))
 				{
-					this._fBatchName = value;
+					this._Cot_Z = value;
 				}
 			}
-				}
-			}
+		}
+	}
 	
 	public partial class GetBatchCheckerResult
 	{
 		
-		private string _fBatchName;
+		private string _Cot_Z;
 		
 		public GetBatchCheckerResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._Cot_Z != value))
 				{
-					this._fBatchName = value;
-				}
+					this._Cot_Z = value;
 				}
 			}
 		}
-		
+	}
+	
 	public partial class GetBatchChecker_AdminResult
 	{
 		
@@ -5407,11 +5483,11 @@ namespace Nencho
 			get
 			{
 				return this._fBatchName;
-		}
+			}
 			set
-		{
-				if ((this._fBatchName != value))
 			{
+				if ((this._fBatchName != value))
+				{
 					this._fBatchName = value;
 				}
 			}
@@ -5421,54 +5497,54 @@ namespace Nencho
 	public partial class GetBatchDEResult
 	{
 		
-		private string _fBatchName;
+		private string _Cot_Z;
 		
 		public GetBatchDEResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._Cot_Z != value))
 				{
-					this._fBatchName = value;
+					this._Cot_Z = value;
 				}
 			}
-				}
-			}
+		}
+	}
 	
 	public partial class GetBatchDE_AdminResult
 	{
 		
-		private string _fBatchName;
+		private string _Cot_Z;
 		
 		public GetBatchDE_AdminResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
 		{
 			get
 			{
-				return this._fBatchName;
+				return this._Cot_Z;
 			}
 			set
 			{
-				if ((this._fBatchName != value))
+				if ((this._Cot_Z != value))
 				{
-					this._fBatchName = value;
+					this._Cot_Z = value;
 				}
 			}
-				}
-			}
+		}
+	}
 	
 	public partial class GetBatchDe_Checker_AdminResult
 	{
@@ -5492,10 +5568,10 @@ namespace Nencho
 				{
 					this._fbatchName = value;
 				}
-				}
 			}
 		}
-		
+	}
+	
 	public partial class GetBatchDE_ChekerResult
 	{
 		
@@ -5511,12 +5587,748 @@ namespace Nencho
 			get
 			{
 				return this._fbatchName;
-		}
+			}
 			set
-		{
-				if ((this._fbatchName != value))
 			{
+				if ((this._fbatchName != value))
+				{
 					this._fbatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataCheckerResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _IDFile;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataCheckerResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
+		{
+			get
+			{
+				return this._IDFile;
+			}
+			set
+			{
+				if ((this._IDFile != value))
+				{
+					this._IDFile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataCheckerCompleteResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _IDFile;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataCheckerCompleteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
+		{
+			get
+			{
+				return this._IDFile;
+			}
+			set
+			{
+				if ((this._IDFile != value))
+				{
+					this._IDFile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
 				}
 			}
 		}
@@ -5528,8 +6340,6 @@ namespace Nencho
 		private string _Cot_G;
 		
 		private string _IDFile;
-		
-		private string _Cot_Z;
 		
 		private string _Truong_26;
 		
@@ -5603,22 +6413,6 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-		{
-				if ((this._Cot_Z != value))
-			{
-					this._Cot_Z = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
 		public string Truong_26
 		{
@@ -5627,14 +6421,14 @@ namespace Nencho
 				return this._Truong_26;
 			}
 			set
-		{
-				if ((this._Truong_26 != value))
 			{
+				if ((this._Truong_26 != value))
+				{
 					this._Truong_26 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
 		public string Truong_27
 		{
@@ -5645,7 +6439,7 @@ namespace Nencho
 			set
 			{
 				if ((this._Truong_27 != value))
-	{
+				{
 					this._Truong_27 = value;
 				}
 			}
@@ -5661,7 +6455,7 @@ namespace Nencho
 			set
 			{
 				if ((this._Truong_28 != value))
-		{
+				{
 					this._Truong_28 = value;
 				}
 			}
@@ -5687,18 +6481,18 @@ namespace Nencho
 		public string Truong_30
 		{
 			get
-				{
+			{
 				return this._Truong_30;
-				}
+			}
 			set
 			{
 				if ((this._Truong_30 != value))
 				{
 					this._Truong_30 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
 		public string Truong_31
 		{
@@ -5709,7 +6503,7 @@ namespace Nencho
 			set
 			{
 				if ((this._Truong_31 != value))
-	{
+				{
 					this._Truong_31 = value;
 				}
 			}
@@ -5725,7 +6519,7 @@ namespace Nencho
 			set
 			{
 				if ((this._Truong_32 != value))
-		{
+				{
 					this._Truong_32 = value;
 				}
 			}
@@ -5743,10 +6537,10 @@ namespace Nencho
 				if ((this._Truong_33 != value))
 				{
 					this._Truong_33 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
 		public string Truong_34
 		{
@@ -5755,9 +6549,9 @@ namespace Nencho
 				return this._Truong_34;
 			}
 			set
-	{
+			{
 				if ((this._Truong_34 != value))
-		{
+				{
 					this._Truong_34 = value;
 				}
 			}
@@ -5775,10 +6569,10 @@ namespace Nencho
 				if ((this._Truong_35 != value))
 				{
 					this._Truong_35 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
 		public string Truong_36
 		{
@@ -5787,9 +6581,9 @@ namespace Nencho
 				return this._Truong_36;
 			}
 			set
-	{
+			{
 				if ((this._Truong_36 != value))
-		{
+				{
 					this._Truong_36 = value;
 				}
 			}
@@ -5807,10 +6601,10 @@ namespace Nencho
 				if ((this._Truong_37 != value))
 				{
 					this._Truong_37 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
 		public string Truong_38
 		{
@@ -5819,9 +6613,9 @@ namespace Nencho
 				return this._Truong_38;
 			}
 			set
-	{
+			{
 				if ((this._Truong_38 != value))
-		{
+				{
 					this._Truong_38 = value;
 				}
 			}
@@ -5839,10 +6633,10 @@ namespace Nencho
 				if ((this._Truong_39 != value))
 				{
 					this._Truong_39 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
 		public string Truong_40
 		{
@@ -5851,9 +6645,9 @@ namespace Nencho
 				return this._Truong_40;
 			}
 			set
-	{
+			{
 				if ((this._Truong_40 != value))
-		{
+				{
 					this._Truong_40 = value;
 				}
 			}
@@ -5871,10 +6665,10 @@ namespace Nencho
 				if ((this._Truong_41 != value))
 				{
 					this._Truong_41 = value;
+				}
 			}
 		}
-	}
-	
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
 		public string Truong_42
 		{
@@ -5883,9 +6677,9 @@ namespace Nencho
 				return this._Truong_42;
 			}
 			set
-	{
+			{
 				if ((this._Truong_42 != value))
-		{
+				{
 					this._Truong_42 = value;
 				}
 			}
@@ -5908,12 +6702,12 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetDataDEResult
+	public partial class GetDataDECompleteResult
 	{
 		
 		private string _Cot_G;
 		
-		private string _Cot_Z;
+		private string _IDFile;
 		
 		private string _Truong_26;
 		
@@ -5951,7 +6745,7 @@ namespace Nencho
 		
 		private string _Truong_43;
 		
-		public GetDataDEResult()
+		public GetDataDECompleteResult()
 		{
 		}
 		
@@ -5971,18 +6765,18 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
 		{
 			get
 			{
-				return this._Cot_Z;
+				return this._IDFile;
 			}
 			set
 			{
-				if ((this._Cot_Z != value))
+				if ((this._IDFile != value))
 				{
-					this._Cot_Z = value;
+					this._IDFile = value;
 				}
 			}
 		}
@@ -6716,58 +7510,6 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetTokenResult
-	{
-		
-		private string _Token;
-		
-		public GetTokenResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
-		public string Token
-		{
-			get
-			{
-				return this._Token;
-			}
-			set
-			{
-				if ((this._Token != value))
-				{
-					this._Token = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetRoLeUserResult
-	{
-		
-		private string _Column1;
-		
-		public GetRoLeUserResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(250)")]
-		public string Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
-				}
-			}
-		}
-	}
-	
 	public partial class GetListUserResult
 	{
 		
@@ -6843,6 +7585,58 @@ namespace Nencho
 				if ((this._Nhanvien != value))
 				{
 					this._Nhanvien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetRoLeUserResult
+	{
+		
+		private string _Column1;
+		
+		public GetRoLeUserResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(250)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTokenResult
+	{
+		
+		private string _Token;
+		
+		public GetTokenResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
+		public string Token
+		{
+			get
+			{
+				return this._Token;
+			}
+			set
+			{
+				if ((this._Token != value))
+				{
+					this._Token = value;
 				}
 			}
 		}
